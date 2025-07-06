@@ -368,7 +368,7 @@ Description: "A comprehensive guide to [your title]. Learn about best practices,
    ```
 
 ### Available Placeholders
-- `{{TITLE}}`: Title of the post
+- `{{TITLE}}`: Post title
 - `{{DATE}}`: Current India timezone timestamp
 - `{{CATEGORIES}}`: Categories array
 - `{{TAGS}}`: Tags array
