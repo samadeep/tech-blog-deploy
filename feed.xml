@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://samadeep.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://samadeep.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-06T13:39:30-04:00</updated><id>https://samadeep.github.io/feed.xml</id><title type="html">Samadeep’s Tech Blog</title><subtitle>A comprehensive technical blog covering system design, software engineering, DevOps practices,  and cutting-edge technology insights. Featuring interactive diagrams and real-world solutions.</subtitle><entry><title type="html">Complete Blog Guide: Features, Diagrams, and Best Practices</title><link href="https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices/" rel="alternate" type="text/html" title="Complete Blog Guide: Features, Diagrams, and Best Practices" /><published>2025-07-06T12:45:09-04:00</published><updated>2025-07-06T12:45:09-04:00</updated><id>https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices</id><content type="html" xml:base="https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices/"><![CDATA[<h1 id="complete-blog-guide-features-diagrams-and-best-practices">Complete Blog Guide: Features, Diagrams, and Best Practices</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://samadeep.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://samadeep.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-06T13:41:18-04:00</updated><id>https://samadeep.github.io/feed.xml</id><title type="html">Samadeep’s Tech Blog</title><subtitle>A comprehensive technical blog covering system design, software engineering, DevOps practices,  and cutting-edge technology insights. Featuring interactive diagrams and real-world solutions.</subtitle><entry><title type="html">Complete Blog Guide: Features, Diagrams, and Best Practices</title><link href="https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices/" rel="alternate" type="text/html" title="Complete Blog Guide: Features, Diagrams, and Best Practices" /><published>2025-07-06T12:45:09-04:00</published><updated>2025-07-06T12:45:09-04:00</updated><id>https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices</id><content type="html" xml:base="https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices/"><![CDATA[<h1 id="complete-blog-guide-features-diagrams-and-best-practices">Complete Blog Guide: Features, Diagrams, and Best Practices</h1>
 
 <p>Welcome to the ultimate guide for this enhanced blog platform! This comprehensive guide covers everything you need to know about using and creating content with our advanced features, interactive diagrams, and modern capabilities.</p>
 
@@ -8,13 +8,13 @@
   <li><a href="#-blog-features-overview"> Blog Features Overview</a></li>
   <li><a href="#-interactive-diagrams"> Interactive Diagrams</a></li>
   <li><a href="#-mermaid-diagrams"> Mermaid Diagrams</a></li>
-  <li><a href="#-plantuml--kroki">️ PlantUML &amp; Kroki</a></li>
+  <li><a href="#️-plantuml--kroki">️ PlantUML &amp; Kroki</a></li>
   <li><a href="#-code-features"> Code Features</a></li>
   <li><a href="#-navigation--ux"> Navigation &amp; UX</a></li>
   <li><a href="#-mobile-experience"> Mobile Experience</a></li>
   <li><a href="#-design-system"> Design System</a></li>
   <li><a href="#-best-practices"> Best Practices</a></li>
-  <li><a href="#-technical-implementation">️ Technical Implementation</a></li>
+  <li><a href="#️-technical-implementation">️ Technical Implementation</a></li>
 </ul>
 
 <hr />
