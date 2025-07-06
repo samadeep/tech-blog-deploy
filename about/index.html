@@ -38,12 +38,12 @@
 <meta property="og:url" content="https://samadeep.github.io/about/" />
 <meta property="og:site_name" content="Samadeep’s Tech Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-07-06T12:09:58-04:00" />
+<meta property="article:published_time" content="2025-07-06T13:39:28-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <meta name="twitter:site" content="@samadeepviews" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","dateModified":"2025-07-06T12:09:58-04:00","datePublished":"2025-07-06T12:09:58-04:00","description":"Hi there! I’m Samadeep Sengupta 👋","headline":"About","name":"Samadeep Sengupta","sameAs":["https://twitter.com/samadeepviews","https://github.com/samadeep","https://www.linkedin.com/in/samadeep"],"url":"https://samadeep.github.io/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","dateModified":"2025-07-06T13:39:28-04:00","datePublished":"2025-07-06T13:39:28-04:00","description":"Hi there! I’m Samadeep Sengupta 👋","headline":"About","name":"Samadeep Sengupta","sameAs":["https://twitter.com/samadeepviews","https://github.com/samadeep","https://www.linkedin.com/in/samadeep"],"url":"https://samadeep.github.io/about/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -269,32 +269,115 @@
 
 
   <body>
-    <!-- The Side Bar -->
-
+    <!-- Responsive Sidebar Component -->
 <style>
-  .sidebar-search-input{
-    padding-left: 1.5rem;
+  :root {
+    /* tweak one value to resize */
+    --sidebar-desktop-width: 20%;
+    --sidebar-tablet-width: 260px;
   }
-  .sidebar-search{
-    padding-left: 1.5rem;
+
+  /* ---- Base layout ---- */
+  #sidebar {
+    width: var(--sidebar-desktop-width);
+    max-width: 320px;
+    min-width: 220px;
+    /* occupy full height if parent is flex */
+    flex: 0 0 auto;
   }
+
+  #sidebar .sidebar-search-input,
+  #sidebar .sidebar-search {
+    width: 100%;
+  }
+
+  /* spacing utilities we used inline before */
+  #sidebar .profile-wrapper,
+  #sidebar .sidebar-search {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* ---- Tablet: collapsible narrow sidebar ---- */
+  @media (max-width: 992px) {
+    #sidebar {
+      width: var(--sidebar-tablet-width);
+    }
+  }
+
+  /* ---- Mobile: transform into top-bar ---- */
+  @media (max-width: 576px) {
+    /* move sidebar to top (order) and stretch full width */
+    #sidebar {
+      order: -1; /* flex hack – render before main */
+      width: 100%;
+      max-width: 100%;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 .75rem;
+    }
+
+    /* stack avatar + titles inline */
+    #sidebar .profile-wrapper {
+      display: flex;
+      align-items: center;
+      padding: .75rem 0;
+    }
+    #sidebar .profile-wrapper h1 {
+      font-size: 1rem;
+      margin: 0 0 0 .5rem;
+    }
+    #sidebar .site-subtitle {
+      display: none; /* hide to save space */
+    }
+
+    /* make nav horizontal and align items left */
+    #sidebar nav {
+      flex: 1 1 auto;
+      padding-left: .75rem;
+    }
+    #sidebar nav .nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: .5rem;
+      justify-content: flex-start; /* align list items to the left */
+    }
+    #sidebar nav .nav-link {
+      padding: .25rem .5rem;
+      font-size: .875rem;
+    }
+
+    /* search bar fills full width under profile on narrow screens */
+    #sidebar .sidebar-search {
+      width: 100%;
+      padding: 0;
+      margin-bottom: .5rem;
+    }
+
+  }
+
+  li.nav-item{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 !important;
+    }
 </style>
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-center">
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.svg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <h1 class="site-title">
+    <h1 class="site-title m-0">
       <a href="/">Samadeep's Tech Blog</a>
     </h1>
-    <p class="site-subtitle fst-italic mb-0">Engineering Excellence • System Design • DevOps Mastery</p>
+    <p class="site-subtitle fst-italic mb-0">Explorations • Algorithms • System Design • DevOps</p>
   </header>
   <!-- .profile-wrapper -->
 
   <!-- Search Bar in Sidebar -->
-  <div class="sidebar-search w-100 mb-3">
-    <search class="d-flex align-items-center">
-      <i class="fas fa-search fa-fw"></i>
+  <div class="sidebar-search mb-3 w-100">
+    <search class="d-flex align-items-center w-100">
+      <i class="fas fa-search fa-fw me-2"></i>
       <input
         class="form-control sidebar-search-input"
         id="search-input"
@@ -307,7 +390,7 @@
   </div>
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
+    <ul class="nav flex-column w-100 px-3">
       <!-- home -->
       <li class="nav-item">
         <a href="/" class="nav-link">
@@ -315,7 +398,7 @@
           <span>HOME</span>
         </a>
       </li>
-      <!-- the real tabs -->
+      <!-- dynamic tabs -->
       
         <li class="nav-item">
           <a href="/categories/" class="nav-link">
@@ -324,7 +407,6 @@
             <span>CATEGORIES</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/tags/" class="nav-link">
@@ -333,7 +415,6 @@
             <span>TAGS</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/archives/" class="nav-link">
@@ -342,7 +423,6 @@
             <span>ARCHIVES</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item active">
           <a href="/about/" class="nav-link">
@@ -351,100 +431,86 @@
             <span>ABOUT</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100 px-3 py-2">
     
-      <button type="button" class="mode-toggle btn" aria-label="Switch Mode">
+      <button type="button" class="mode-toggle btn btn-sm" aria-label="Switch Mode">
         <i class="fas fa-adjust"></i>
       </button>
-
       
-        <span class="icon-border"></span>
+        <span class="icon-border mx-2"></span>
       
     
 
     
       
-
       
         <a
           href="https://github.com/samadeep"
           aria-label="github"
           
-
           
             target="_blank"
             
           
-
           
-
           
             rel="noopener noreferrer"
           
+          class="text-decoration-none mx-1"
         >
           <i class="fab fa-github"></i>
         </a>
       
     
       
-
       
         <a
           href="https://twitter.com/samadeepviews"
           aria-label="twitter"
           
-
           
             target="_blank"
             
           
-
           
-
           
             rel="noopener noreferrer"
           
+          class="text-decoration-none mx-1"
         >
           <i class="fa-brands fa-x-twitter"></i>
         </a>
       
     
       
-
       
         <a
           href="javascript:location.href = 'mailto:' + ['samadeepsengupta','gmail.com'].join('@')"
           aria-label="email"
           
-
           
-
           
-
           
+          class="text-decoration-none mx-1"
         >
           <i class="fas fa-envelope"></i>
         </a>
       
     
       
-
       
         <a
           href="/feed.xml"
           aria-label="rss"
           
-
           
-
           
-
           
+          class="text-decoration-none mx-1"
         >
           <i class="fas fa-rss"></i>
         </a>
@@ -1070,7 +1136,14 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/mermaid-test/">Mermaid Test</a>
+          <a href="/posts/complete-blog-guide-features-diagrams-and-best-practices/">Complete Blog Guide: Features, Diagrams, and Best Practices</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/mermaid-test/">Enhanced Mermaid Diagrams: Transparent Backgrounds & Vibrant Colors</a>
         </li>
       
         
@@ -1120,6 +1193,209 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -1274,201 +1550,6 @@
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1527,6 +1608,15 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/diagrams/">diagrams</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mermaid/">mermaid</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/algorithms/">algorithms</a>
       
         
@@ -1539,22 +1629,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/colors/">colors</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/competitive-programming/">competitive-programming</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css/">css</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-structures/">data-structures</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/distributed-systems/">distributed-systems</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dynamic-programming/">dynamic-programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
       
     </div>
   </section>
@@ -1629,6 +1710,209 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -1783,201 +2067,6 @@
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2036,6 +2125,15 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/diagrams/">diagrams</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mermaid/">mermaid</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/algorithms/">algorithms</a>
       
         
@@ -2048,22 +2146,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/colors/">colors</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/competitive-programming/">competitive-programming</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css/">css</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-structures/">data-structures</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/distributed-systems/">distributed-systems</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dynamic-programming/">dynamic-programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
       
     </div>
   </section>

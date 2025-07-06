@@ -273,32 +273,115 @@
 
 
   <body>
-    <!-- The Side Bar -->
-
+    <!-- Responsive Sidebar Component -->
 <style>
-  .sidebar-search-input{
-    padding-left: 1.5rem;
+  :root {
+    /* tweak one value to resize */
+    --sidebar-desktop-width: 20%;
+    --sidebar-tablet-width: 260px;
   }
-  .sidebar-search{
-    padding-left: 1.5rem;
+
+  /* ---- Base layout ---- */
+  #sidebar {
+    width: var(--sidebar-desktop-width);
+    max-width: 320px;
+    min-width: 220px;
+    /* occupy full height if parent is flex */
+    flex: 0 0 auto;
   }
+
+  #sidebar .sidebar-search-input,
+  #sidebar .sidebar-search {
+    width: 100%;
+  }
+
+  /* spacing utilities we used inline before */
+  #sidebar .profile-wrapper,
+  #sidebar .sidebar-search {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* ---- Tablet: collapsible narrow sidebar ---- */
+  @media (max-width: 992px) {
+    #sidebar {
+      width: var(--sidebar-tablet-width);
+    }
+  }
+
+  /* ---- Mobile: transform into top-bar ---- */
+  @media (max-width: 576px) {
+    /* move sidebar to top (order) and stretch full width */
+    #sidebar {
+      order: -1; /* flex hack – render before main */
+      width: 100%;
+      max-width: 100%;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 .75rem;
+    }
+
+    /* stack avatar + titles inline */
+    #sidebar .profile-wrapper {
+      display: flex;
+      align-items: center;
+      padding: .75rem 0;
+    }
+    #sidebar .profile-wrapper h1 {
+      font-size: 1rem;
+      margin: 0 0 0 .5rem;
+    }
+    #sidebar .site-subtitle {
+      display: none; /* hide to save space */
+    }
+
+    /* make nav horizontal and align items left */
+    #sidebar nav {
+      flex: 1 1 auto;
+      padding-left: .75rem;
+    }
+    #sidebar nav .nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: .5rem;
+      justify-content: flex-start; /* align list items to the left */
+    }
+    #sidebar nav .nav-link {
+      padding: .25rem .5rem;
+      font-size: .875rem;
+    }
+
+    /* search bar fills full width under profile on narrow screens */
+    #sidebar .sidebar-search {
+      width: 100%;
+      padding: 0;
+      margin-bottom: .5rem;
+    }
+
+  }
+
+  li.nav-item{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 !important;
+    }
 </style>
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-center">
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.svg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <h1 class="site-title">
+    <h1 class="site-title m-0">
       <a href="/">Samadeep's Tech Blog</a>
     </h1>
-    <p class="site-subtitle fst-italic mb-0">Engineering Excellence • System Design • DevOps Mastery</p>
+    <p class="site-subtitle fst-italic mb-0">Explorations • Algorithms • System Design • DevOps</p>
   </header>
   <!-- .profile-wrapper -->
 
   <!-- Search Bar in Sidebar -->
-  <div class="sidebar-search w-100 mb-3">
-    <search class="d-flex align-items-center">
-      <i class="fas fa-search fa-fw"></i>
+  <div class="sidebar-search mb-3 w-100">
+    <search class="d-flex align-items-center w-100">
+      <i class="fas fa-search fa-fw me-2"></i>
       <input
         class="form-control sidebar-search-input"
         id="search-input"
@@ -311,7 +394,7 @@
   </div>
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
+    <ul class="nav flex-column w-100 px-3">
       <!-- home -->
       <li class="nav-item">
         <a href="/" class="nav-link">
@@ -319,7 +402,7 @@
           <span>HOME</span>
         </a>
       </li>
-      <!-- the real tabs -->
+      <!-- dynamic tabs -->
       
         <li class="nav-item">
           <a href="/categories/" class="nav-link">
@@ -328,7 +411,6 @@
             <span>CATEGORIES</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/tags/" class="nav-link">
@@ -337,7 +419,6 @@
             <span>TAGS</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/archives/" class="nav-link">
@@ -346,7 +427,6 @@
             <span>ARCHIVES</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/about/" class="nav-link">
@@ -355,100 +435,86 @@
             <span>ABOUT</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100 px-3 py-2">
     
-      <button type="button" class="mode-toggle btn" aria-label="Switch Mode">
+      <button type="button" class="mode-toggle btn btn-sm" aria-label="Switch Mode">
         <i class="fas fa-adjust"></i>
       </button>
-
       
-        <span class="icon-border"></span>
+        <span class="icon-border mx-2"></span>
       
     
 
     
       
-
       
         <a
           href="https://github.com/samadeep"
           aria-label="github"
           
-
           
             target="_blank"
             
           
-
           
-
           
             rel="noopener noreferrer"
           
+          class="text-decoration-none mx-1"
         >
           <i class="fab fa-github"></i>
         </a>
       
     
       
-
       
         <a
           href="https://twitter.com/samadeepviews"
           aria-label="twitter"
           
-
           
             target="_blank"
             
           
-
           
-
           
             rel="noopener noreferrer"
           
+          class="text-decoration-none mx-1"
         >
           <i class="fa-brands fa-x-twitter"></i>
         </a>
       
     
       
-
       
         <a
           href="javascript:location.href = 'mailto:' + ['samadeepsengupta','gmail.com'].join('@')"
           aria-label="email"
           
-
           
-
           
-
           
+          class="text-decoration-none mx-1"
         >
           <i class="fas fa-envelope"></i>
         </a>
       
     
       
-
       
         <a
           href="/feed.xml"
           aria-label="rss"
           
-
           
-
           
-
           
+          class="text-decoration-none mx-1"
         >
           <i class="fas fa-rss"></i>
         </a>
@@ -553,6 +619,253 @@
 
 
 
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
 
 <!-- Add header for code snippets -->
 
@@ -575,17 +888,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1014,12 +1316,12 @@
 <script src="https://cdn.jsdelivr.net/npm/plantuml-encoder@1.4.0/dist/plantuml-encoder.min.js"></script>
 
 <!-- Custom Diagram Styles -->
-<link rel="stylesheet" href="/assets/css/diagrams.css?v=1751818198">
+<link rel="stylesheet" href="/assets/css/diagrams.css?v=1751823568">
 
 <!-- Mermaid will be initialized in diagrams.js -->
 
 <!-- Custom Diagram JavaScript -->
-<script src="/assets/js/diagrams.js?v=1751818198"></script>
+<script src="/assets/js/diagrams.js?v=1751823568"></script>
 
 <!-- Math Support -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -1115,9 +1417,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1555 words"
+  title="1431 words"
 >
-  <em>8 min</em> read</span>
+  <em>7 min</em> read</span>
 
       </div>
       
@@ -1164,19 +1466,9 @@
 
 <p>A <strong>scheduler</strong> is a system component responsible for managing the execution of tasks or processes. In the context of software systems, schedulers determine when, where, and how tasks are executed, optimizing resource utilization and ensuring system responsiveness.</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-878f7a60" class="mermaid">
-    
-graph TB
-    A[Task Queue] --&gt; B[Scheduler]
-    B --&gt; C[Worker Pool]
-    C --&gt; D[Task Execution]
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-d901ea2f" class="kroki-diagram">
+    <a href="https://kroki.io/plantuml/svg/eNp1VE1v2zAMvftXcBmwrcDSNSk6tDsMTZoVA9J0aZyhl15kmUmEyJIn0f3AsP8-ynYT22h0CGK-x0fxUdKlJ-GoyHT0jjaYIeRaKBP5rTK5cCKDRMjt2tnCpFdWWwdunXwaDi4-w3BwXv4cQYPtNyK1T8qsYSW0xwZSSkjrDDoYnDWAlTUk99LDr6w6DPqnp0dR9BH6uwUxvWhsBBoq0ma5NWgI_kbAa9zZ9vvBSXJxPhieVKh1KboKKVcNN8DlRsmtQe8BhtG_RqU_BRZ4qMrq7AJPkoNVKvhwlXa7I0nW-Wa_IkSgtxR-C3Nn00Ki64HwsJx3cq-sQ_iheaKGWhLV9qtVCd2FSA8aKwjeRXtLmRnLDaaF5uHF6B6VrBOYGV_9bFPvrdsyb26tfjAzYcQ6bDJQ7-ezN6m3Nm1tIFCnnYbm6LzyhEa2TkAqSCTC476dD3xMBOGDmYx7O7nJuM1coC80MZNt6rUKL-JO4QVqJRKlFb0c9HGCIu3fIBE307AzFL656-j9Sjw7-IZiy5kZklPSczcjNp34RvVqxdmoI3it7VNrxMs58Od3niFnfIO4SDJFQGxOFEIB4qEF6Baf-iEO-BjqfoHcah0FMJAm4zK_dh4yJBFM3OE8zoCPvFdrU-mHUAlNy9SJ8rkguanBaVV8EVf7CuaDKyexw-qav3OuhMCPExV-B85GJbgoDCl-qrLKo3I_x8c7uD6q4RF6Zby2zdMIjGvuQgPfpEw89x1zXjqW3lrClqWGA0A2B7sKVwNgUjiR8GNUuleehQhNCoEXVezEEtksJPBZBoiFSRP7jCngM8qClDX7jEv-x2_wf-PtljA=" class="popup img-link  shimmer"><img src="https://kroki.io/plantuml/svg/eNp1VE1v2zAMvftXcBmwrcDSNSk6tDsMTZoVA9J0aZyhl15kmUmEyJIn0f3AsP8-ynYT22h0CGK-x0fxUdKlJ-GoyHT0jjaYIeRaKBP5rTK5cCKDRMjt2tnCpFdWWwdunXwaDi4-w3BwXv4cQYPtNyK1T8qsYSW0xwZSSkjrDDoYnDWAlTUk99LDr6w6DPqnp0dR9BH6uwUxvWhsBBoq0ma5NWgI_kbAa9zZ9vvBSXJxPhieVKh1KboKKVcNN8DlRsmtQe8BhtG_RqU_BRZ4qMrq7AJPkoNVKvhwlXa7I0nW-Wa_IkSgtxR-C3Nn00Ki64HwsJx3cq-sQ_iheaKGWhLV9qtVCd2FSA8aKwjeRXtLmRnLDaaF5uHF6B6VrBOYGV_9bFPvrdsyb26tfjAzYcQ6bDJQ7-ezN6m3Nm1tIFCnnYbm6LzyhEa2TkAqSCTC476dD3xMBOGDmYx7O7nJuM1coC80MZNt6rUKL-JO4QVqJRKlFb0c9HGCIu3fIBE307AzFL656-j9Sjw7-IZiy5kZklPSczcjNp34RvVqxdmoI3it7VNrxMs58Od3niFnfIO4SDJFQGxOFEIB4qEF6Baf-iEO-BjqfoHcah0FMJAm4zK_dh4yJBFM3OE8zoCPvFdrU-mHUAlNy9SJ8rkguanBaVV8EVf7CuaDKyexw-qav3OuhMCPExV-B85GJbgoDCl-qrLKo3I_x8c7uD6q4RF6Zby2zdMIjGvuQgPfpEw89x1zXjqW3lrClqWGA0A2B7sKVwNgUjiR8GNUuleehQhNCoEXVezEEtksJPBZBoiFSRP7jCngM8qClDX7jEv-x2_wf-PtljA=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" loading="lazy"></a>
   </div>
 </div>
 
@@ -1350,21 +1642,9 @@ Time: [300-400ms] → Task A (continues)
 
 <h3 id="1-producer-consumer-pattern"><span class="me-2">1. Producer-Consumer Pattern</span><a href="#1-producer-consumer-pattern" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-7305edbe" class="mermaid">
-    
-graph LR
-    A[Producer] --&gt; D[Queue]
-    B[Producer] --&gt; D
-    D --&gt; E[Consumer]
-    D --&gt; F[Consumer]
-    
-    style D fill:#ffeb3b
-    style A fill:#4caf50
-    style B fill:#4caf50
-    style E fill:#2196f3
-    style F fill:#2196f3
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-04bf6906" class="kroki-diagram">
+    <a href="https://kroki.io/plantuml/svg/eNp1kktrwzAQhO_6Fdv00kADkUJKkkMJNT2W2tBjLrIsP4i160oyhZb-98oPEjckPtiSZ-bbsdHeeWl9a2p250ttNDS1rJC5Y4WNtNJAKtWxsNRiFlFNFmyRPgi-fQTBN_1tDhO3K2VGXxUWkMva6YnSIxRZ1Bb4eiLkhF6d0eIpUEXHX63mbOJTZBpCjR5-GITr5aLYPV-m2w0Xy0Elm2n7T5m8_ygrdUTtHAj2Ox3y2epW3xqQr7d6mV4bMCi3B5y7z2JLWau6nzAD6SDmV0UxiIINhWZvASULDUm37bVkmosIXWtO0IhfFQdoJBiLOSwWz4ERi3GR9M8QHBfBhOQ1eGqAckhgB1GgWVmDGbv01QZXSt6T6YyBvINXLCUqnUEzfs8BT33cZSLqEu-Nr0z1HSJqbHvAEFZhVDhMbK8xC2f0D3kG3KE=" class="popup img-link  shimmer"><img src="https://kroki.io/plantuml/svg/eNp1kktrwzAQhO_6Fdv00kADkUJKkkMJNT2W2tBjLrIsP4i160oyhZb-98oPEjckPtiSZ-bbsdHeeWl9a2p250ttNDS1rJC5Y4WNtNJAKtWxsNRiFlFNFmyRPgi-fQTBN_1tDhO3K2VGXxUWkMva6YnSIxRZ1Bb4eiLkhF6d0eIpUEXHX63mbOJTZBpCjR5-GITr5aLYPV-m2w0Xy0Elm2n7T5m8_ygrdUTtHAj2Ox3y2epW3xqQr7d6mV4bMCi3B5y7z2JLWau6nzAD6SDmV0UxiIINhWZvASULDUm37bVkmosIXWtO0IhfFQdoJBiLOSwWz4ERi3GR9M8QHBfBhOQ1eGqAckhgB1GgWVmDGbv01QZXSt6T6YyBvINXLCUqnUEzfs8BT33cZSLqEu-Nr0z1HSJqbHvAEFZhVDhMbK8xC2f0D3kG3KE=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" loading="lazy"></a>
   </div>
 </div>
 
@@ -1699,33 +1979,9 @@ Behavior                   Behavior
 
 <h3 id="4-advanced-scheduling-architecture"><span class="me-2">4. <strong>Advanced Scheduling Architecture</strong></span><a href="#4-advanced-scheduling-architecture" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-deb7ec8e" class="mermaid">
-    
-graph TB
-    subgraph "System Architecture"
-        LB[Load Balancer]
-        S1[Scheduler 1]
-        S2[Scheduler 2]
-        MQ[Message Queue]
-        W1[Worker Pool 1]
-        W2[Worker Pool 2]
-        DB[(Database)]
-    end
-    
-    LB --&gt; S1
-    LB --&gt; S2
-    S1 --&gt; MQ
-    S2 --&gt; MQ
-    MQ --&gt; W1
-    MQ --&gt; W2
-    W1 --&gt; DB
-    W2 --&gt; DB
-    
-    style LB fill:#ff9800
-    style MQ fill:#f44336
-    style DB fill:#4caf50
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-6c3b12d2" class="kroki-diagram">
+    <a href="https://kroki.io/plantuml/svg/eNp1k01vnDAQhu_-FdPtIY3USMFRN0kPVbq7ve2qXRGJSy4GBrDWzCDbNNpW_e81ELJuleWAXvHMvPNh_OC8sr5vjXjnG2wROqM0CXfQ1CmrWshVcagt91Su2bAFW-cfZHL_EWRyN74uIYp2jSr5WVMNlTIOIzJaFGwJLSSfIlAx-eJkLZfBVQ7-NzeXUZjRhP7YIbD1DQtxAd-oUVRgCc4fA62j4ILbjgnJw28B4Vn9N8T75fIWUcnribIt0f5Dou-PjS4OhM6BFH9EVKRUXuXK4bkayXV-f5e8VWMi52tcQHp0Hlv4aotGeyx8bxHW81BOnOZbbFmVobYZVmEXoBxsVzFPiwbL3gxbH2mawNtYTljGdBdaUjXCvsceR77bxzxjewipP5jNi32WnOOTfybF694Wmxc1ks1qGHzNRGFezeTgWfsGvFXkwsIHv_mgtyu4uvoSRnlVUoS5BhX6S-WsdvtRhZ5mJUU2xYVqmZyVIPYIVteNB67CAuHz6e_6qZ3OtdH--ESPUTOni-GmfIPVmL4Z0r93Xrf6V8jv0FZs28HsidIinFRuEFR0suIBqQxX8C_E-iZO" class="popup img-link  shimmer"><img src="https://kroki.io/plantuml/svg/eNp1k01vnDAQhu_-FdPtIY3USMFRN0kPVbq7ve2qXRGJSy4GBrDWzCDbNNpW_e81ELJuleWAXvHMvPNh_OC8sr5vjXjnG2wROqM0CXfQ1CmrWshVcagt91Su2bAFW-cfZHL_EWRyN74uIYp2jSr5WVMNlTIOIzJaFGwJLSSfIlAx-eJkLZfBVQ7-NzeXUZjRhP7YIbD1DQtxAd-oUVRgCc4fA62j4ILbjgnJw28B4Vn9N8T75fIWUcnribIt0f5Dou-PjS4OhM6BFH9EVKRUXuXK4bkayXV-f5e8VWMi52tcQHp0Hlv4aotGeyx8bxHW81BOnOZbbFmVobYZVmEXoBxsVzFPiwbL3gxbH2mawNtYTljGdBdaUjXCvsceR77bxzxjewipP5jNi32WnOOTfybF694Wmxc1ks1qGHzNRGFezeTgWfsGvFXkwsIHv_mgtyu4uvoSRnlVUoS5BhX6S-WsdvtRhZ5mJUU2xYVqmZyVIPYIVteNB67CAuHz6e_6qZ3OtdH--ESPUTOni-GmfIPVmL4Z0r93Xrf6V8jv0FZs28HsidIinFRuEFR0suIBqQxX8C_E-iZO" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" loading="lazy"></a>
   </div>
 </div>
 
@@ -1934,15 +2190,6 @@ graph TB
 
 <p><em>Have questions about schedulers or want to share your own experiences? Feel free to reach out on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://www.linkedin.com/in/samadeep">LinkedIn</a>!</em></p>
 
-<h2 id="further-reading"><span class="me-2">Further Reading</span><a href="#further-reading" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<ul>
-  <li><a href="https://example.com">Distributed Systems Concepts</a></li>
-  <li><a href="https://example.com">Concurrency in Python</a></li>
-  <li><a href="https://example.com">Microservices Architecture Patterns</a></li>
-  <li><a href="https://example.com">System Design Interview Questions</a></li>
-</ul>
-
   </div>
 
   <div class="post-tail-wrapper text-muted">
@@ -1979,16 +2226,6 @@ graph TB
     
 
     <div class="post-tail-bottom d-flex justify-content-between align-items-center mt-5 pb-2">
-      <div class="license-wrapper">
-        
-          
-          This post is licensed under 
-            <a href="https://creativecommons.org/licenses/by/4.0/">
-              CC BY 4.0
-            </a>
-           by the author.
-        
-      </div>
 
       <!-- Post sharing snippet -->
 
@@ -2193,7 +2430,14 @@ graph TB
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/mermaid-test/">Mermaid Test</a>
+          <a href="/posts/complete-blog-guide-features-diagrams-and-best-practices/">Complete Blog Guide: Features, Diagrams, and Best Practices</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/mermaid-test/">Enhanced Mermaid Diagrams: Transparent Backgrounds & Vibrant Colors</a>
         </li>
       
         
@@ -2243,6 +2487,209 @@ graph TB
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -2397,201 +2844,6 @@ graph TB
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2650,6 +2902,15 @@ graph TB
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/diagrams/">diagrams</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mermaid/">mermaid</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/algorithms/">algorithms</a>
       
         
@@ -2662,22 +2923,13 @@ graph TB
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/colors/">colors</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/competitive-programming/">competitive-programming</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css/">css</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-structures/">data-structures</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/distributed-systems/">distributed-systems</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dynamic-programming/">dynamic-programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
       
     </div>
   </section>
@@ -2829,6 +3081,209 @@ graph TB
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -2983,201 +3438,6 @@ graph TB
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3236,6 +3496,15 @@ graph TB
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/diagrams/">diagrams</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mermaid/">mermaid</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/algorithms/">algorithms</a>
       
         
@@ -3248,22 +3517,13 @@ graph TB
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/colors/">colors</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/competitive-programming/">competitive-programming</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css/">css</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-structures/">data-structures</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/distributed-systems/">distributed-systems</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dynamic-programming/">dynamic-programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
       
     </div>
   </section>

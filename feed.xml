@@ -1,112 +1,1204 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://samadeep.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://samadeep.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-06T12:09:58-04:00</updated><id>https://samadeep.github.io/feed.xml</id><title type="html">Samadeep’s Tech Blog</title><subtitle>A comprehensive technical blog covering system design, software engineering, DevOps practices,  and cutting-edge technology insights. Featuring interactive diagrams and real-world solutions.</subtitle><entry><title type="html">Mermaid Test</title><link href="https://samadeep.github.io/posts/mermaid-test/" rel="alternate" type="text/html" title="Mermaid Test" /><published>2025-07-06T08:41:24-04:00</published><updated>2025-07-06T08:41:24-04:00</updated><id>https://samadeep.github.io/posts/mermaid-test</id><content type="html" xml:base="https://samadeep.github.io/posts/mermaid-test/"><![CDATA[<h1 id="mermaid-test">Mermaid Test</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://samadeep.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://samadeep.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-06T13:39:28-04:00</updated><id>https://samadeep.github.io/feed.xml</id><title type="html">Samadeep’s Tech Blog</title><subtitle>A comprehensive technical blog covering system design, software engineering, DevOps practices,  and cutting-edge technology insights. Featuring interactive diagrams and real-world solutions.</subtitle><entry><title type="html">Complete Blog Guide: Features, Diagrams, and Best Practices</title><link href="https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices/" rel="alternate" type="text/html" title="Complete Blog Guide: Features, Diagrams, and Best Practices" /><published>2025-07-06T12:45:09-04:00</published><updated>2025-07-06T12:45:09-04:00</updated><id>https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices</id><content type="html" xml:base="https://samadeep.github.io/posts/complete-blog-guide-features-diagrams-and-best-practices/"><![CDATA[<h1 id="complete-blog-guide-features-diagrams-and-best-practices">Complete Blog Guide: Features, Diagrams, and Best Practices</h1>
 
-<p>This is a simple test post to verify Mermaid diagrams are working correctly.</p>
+<p>Welcome to the ultimate guide for this enhanced blog platform! This comprehensive guide covers everything you need to know about using and creating content with our advanced features, interactive diagrams, and modern capabilities.</p>
 
-<h2 id="simple-flowchart">Simple Flowchart</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-eae5a609" class="mermaid">
-    
-graph TD
-    A[Start] --&gt; B{Is it working?}
-    B --&gt;|Yes| C[Great!]
-    B --&gt;|No| D[Fix it]
-    D --&gt; B
-    C --&gt; E[End]
-
-  </div>
-</div>
-
-<h2 id="complex-decision-tree-similar-to-fixed-diagram">Complex Decision Tree (Similar to Fixed Diagram)</h2>
-
-<div class="mermaid-diagram">
-  <div id="mermaid-2b23ba39" class="mermaid">
-    
-graph TB
-    A["Item i, Weight w, Value v"] --&gt; B["Include Item i"]
-    A --&gt; C["Exclude Item i"]
-    B --&gt; D["Value = v + DP[W-w]"]
-    C --&gt; E["Value = DP[W]"]
-    D --&gt; F["Max(Include, Exclude)"]
-    E --&gt; F
-    
-    style A fill:#e1f5fe
-    style B fill:#c8e6c9
-    style C fill:#ffcdd2
-    style F fill:#fff3e0
-
-  </div>
-</div>
-
-<h2 id="state-transition-diagram">State Transition Diagram</h2>
-
-<div class="mermaid-diagram">
-  <div id="mermaid-5e286d0f" class="mermaid">
-    
-graph TB
-    A["Position i-1"] --&gt; B["A[i-1] &lt; A[i] &amp;&amp; B[i-1] &lt; B[i]"]
-    A --&gt; C["A[i-1] &lt; B[i] &amp;&amp; B[i-1] &lt; A[i]"]
-    
-    B --&gt; D["Case 1: Natural Order"]
-    C --&gt; E["Case 2: Cross Order"]
-    
-    D --&gt; F1["not_swap[i] = not_swap[i-1]"]
-    D --&gt; F2["swap[i] = swap[i-1] + 1"]
-    
-    E --&gt; G1["not_swap[i] = min(not_swap[i], swap[i-1])"]
-    E --&gt; G2["swap[i] = min(swap[i], not_swap[i-1] + 1)"]
-    
-    style B fill:#c8e6c9
-    style C fill:#ffcdd2
-    style D fill:#e1f5fe
-    style E fill:#fff3e0
-    style F1 fill:#f0f8ff
-    style F2 fill:#f0f8ff
-    style G1 fill:#fff8dc
-    style G2 fill:#fff8dc
-
-  </div>
-</div>
-
-<h2 id="sequence-diagram">Sequence Diagram</h2>
-
-<div class="mermaid-diagram">
-  <div id="mermaid-171db4e5" class="mermaid">
-    
-sequenceDiagram
-    participant User
-    participant Browser
-    participant Server
-    
-    User-&gt;&gt;Browser: Visit blog
-    Browser-&gt;&gt;Server: Request page
-    Server--&gt;&gt;Browser: Return HTML
-    Browser-&gt;&gt;Browser: Load Mermaid
-    Browser-&gt;&gt;User: Display diagram
-
-  </div>
-</div>
-
-<h2 id="simple-pie-chart">Simple Pie Chart</h2>
-
-<div class="mermaid-diagram">
-  <div id="mermaid-78b1d8a1" class="mermaid">
-    
-pie title Blog Features
-    "TOC" : 25
-    "Progress Bar" : 20
-    "Copy Buttons" : 15
-    "Image Lightbox" : 15
-    "Navigation" : 25
-
-  </div>
-</div>
-
-<p>If you can see all the diagrams above, Mermaid is working correctly!</p>
+<ul>
+  <li><a href="#-blog-features-overview"> Blog Features Overview</a></li>
+  <li><a href="#-interactive-diagrams"> Interactive Diagrams</a></li>
+  <li><a href="#-mermaid-diagrams"> Mermaid Diagrams</a></li>
+  <li><a href="#-plantuml--kroki">️ PlantUML &amp; Kroki</a></li>
+  <li><a href="#-code-features"> Code Features</a></li>
+  <li><a href="#-navigation--ux"> Navigation &amp; UX</a></li>
+  <li><a href="#-mobile-experience"> Mobile Experience</a></li>
+  <li><a href="#-design-system"> Design System</a></li>
+  <li><a href="#-best-practices"> Best Practices</a></li>
+  <li><a href="#-technical-implementation">️ Technical Implementation</a></li>
+</ul>
 
 <hr />
 
-<p><em>Have questions or feedback? Feel free to reach out on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://www.linkedin.com/in/samadeep">LinkedIn</a>!</em></p>]]></content><author><name>Samadeep Sengupta</name></author><category term="Test" /><category term="mermaid" /><category term="test" /><summary type="html"><![CDATA[Testing Mermaid diagram rendering functionality]]></summary></entry><entry><title type="html">Blog Enhancement Showcase: New Features Demo</title><link href="https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo/" rel="alternate" type="text/html" title="Blog Enhancement Showcase: New Features Demo" /><published>2025-07-06T08:36:03-04:00</published><updated>2025-07-06T08:36:03-04:00</updated><id>https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo</id><content type="html" xml:base="https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo/"><![CDATA[<h1 id="blog-enhancement-showcase-new-features-demo">Blog Enhancement Showcase: New Features Demo</h1>
+<h2 id="blog-features-overview">Blog Features Overview</h2>
+
+<p>This blog platform includes cutting-edge features designed for modern content creation and consumption:</p>
+
+<h3 id="core-features">Core Features</h3>
+
+<ul>
+  <li>** Interactive Diagrams** - Mermaid, PlantUML, and Kroki support</li>
+  <li>** One-Click Copy** - Copy code and diagrams instantly</li>
+  <li>** Smart Navigation** - Auto-generated TOC with scroll spy</li>
+  <li>** Reading Progress** - Visual progress tracking</li>
+  <li>** Image Lightbox** - Full-screen image viewing</li>
+  <li>** Mobile-First Design** - Responsive across all devices</li>
+  <li>** Transparent Backgrounds** - Clean, modern diagram styling</li>
+  <li>** Performance Optimized** - Fast loading and smooth animations</li>
+</ul>
+
+<h3 id="user-experience-enhancements">User Experience Enhancements</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-2650d5ff" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp1VMFum0AQvfMVU_fSSLUUE9VNeqhSiFUlitLIkJx8WWCAlZddtLs4sar8e2eXmBDqcADBvHnv8Wbg0limbdeI4JOtsUFoBeMyMFsuW6ZZAxnLt5VWnSxiJZQGXWVfwsXFVwgX5_50AiO0qVmhnrisoGTC4KjiKXKlJWpYfBsVSiVt_kYdLok1dPxnZyfBCJerplUSpYW_AdARTYx9Xi6_I7LwtK8qXaB-Vxk9T2uebyUaA2HwMhZpiZRV-JHE4jS7OF8ck-grH0u8uZ89GIrgkRtuDURCVTNgBh6S1ToIDvKzNbLCpXivVaWJZPbqaERDDB0TAwJSTc3U4-ke79MpfmUsb5jFAg7kKW_Qo1fr1Hkc1FOWCQRVQkyzoeZj8r86q-a_kcbpOdM_saei6xSZ5FoJAUm7hzu24xWzXEkPTpK7KTgWFNucqG-6poUEcwc2Hh3fJO9cXpM3emfLd3gwesRnrEg3VgVC1Fk7cMXRFDimu-KsonXosddX_0EbZ-CWV7XN1HMPup2C3PKAVZCq1iOi1IfsBg3z-U8_ouHGxTbcOHOBVBZBOwk3CF_7AStZM5lT3B3t0Ebic4uaIz2BJ27rjbSaSUOb7AwYuxc05Z5IYOl5SJRohp2xrzuzka4fdv1KlYiF--z7Vqta10kOqTNp6G8BchjjRjJZgOknbNp935IpSrrxCxRH1DWOtkRmOxLfyJK-mwwtlQBlRYk2ZDu4RFnQ7-gfXYyCCw==" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<hr />
+
+<h2 id="interactive-diagrams">Interactive Diagrams</h2>
+
+<p>Our blog supports multiple diagram types with <strong>transparent backgrounds</strong> and <strong>enhanced color visibility</strong>:</p>
+
+<h3 id="diagram-types-available">Diagram Types Available</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Use Cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Mermaid</strong></td>
+      <td>Flowcharts, sequences, Gantt charts</td>
+      <td>Process flows, system diagrams</td>
+    </tr>
+    <tr>
+      <td>️ <strong>PlantUML</strong></td>
+      <td>UML diagrams, architecture</td>
+      <td>System design, class diagrams</td>
+    </tr>
+    <tr>
+      <td><strong>Kroki</strong></td>
+      <td>Multiple diagram formats</td>
+      <td>Versatile diagram creation</td>
+    </tr>
+    <tr>
+      <td><strong>Charts</strong></td>
+      <td>Data visualization</td>
+      <td>Statistics, analytics</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="diagram-features">Diagram Features</h3>
+
+<p>All diagrams now feature:</p>
+<ul>
+  <li><strong>Transparent backgrounds</strong> for seamless integration</li>
+  <li><strong>Enhanced color visibility</strong> with high contrast</li>
+  <li><strong>Interactive controls</strong> (zoom, copy, download)</li>
+  <li><strong>Responsive design</strong> that adapts to screen size</li>
+  <li><strong>Lazy loading</strong> for better performance</li>
+</ul>
+
+<hr />
+
+<h2 id="mermaid-diagrams">Mermaid Diagrams</h2>
+
+<p>Mermaid diagrams provide powerful visualization capabilities with clean, transparent styling.</p>
+
+<h3 id="flowchart-example">Flowchart Example</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-1b222016" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNpdksFOwzAMhu95CiMurcSBdmJAd2DAJsSJSXDcxUvTNmrrVIm7aSDeHXebtI4cEsm_9fm3nXlg9Ny3jbriyrQGugYtqVBb6tBjCxvUdeldT_mra5wHX26iNHm8gTR5OFwxjLJDhbnbWSqhwCaYkXJAaOfJeEjuRkLhiPUZnU6Fmg78ySRWozzUbLeW9_CjQM7LP1_X0-m9MZjeHlXnc-MvlFH8q7K6JhMCpOpXagwjUNnn8MDKOy3KTNkCooXRNlhHsHKW-CkGmRFBtDchPuCyZzElcjJTRtqFiNylkIpAuS1UduLCAhlnKnszMghkAx89dz1LZEn5uXhg1ylFThK8LSuGDJZUIWmTQ9G4na7E65p2litgjxRkRoYkcl4XBN43sokjpTHFAHlvO--2AslPna2pxXrYV3csvaatDT029huHBtRc7Mvv-ANZ2LpO" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<h3 id="sequence-diagram">Sequence Diagram</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-7bc4871e" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNpdUk1PwkAQve-vGPWiCSRSImoPxtQaY-LBWOrJy9AO7YYyS3YHCRr_u9MCsdjDHt5X3_b1Pgh6WS8bcyI1LQlWDVo2YWF5hR6XMMNiUXm35vLBNc6Dr2bn0eh2ANHopjsuoKcONZZuY7mCOTaBekwXUTjP5GF01SPmjqX4i44mmhq1-ePxhenp9BRb2BWywLcBfZJ_1c4mk2sijC53rPMl-SOmh09rWyyYQoDI_BjTDz_NA_lTwAD5MZ40rurw5BhPLVZtw0euLFOnSI8VGfnPfWZmTA7DO0hieLfBCrxiRSZpoTSGZ7ZisbFfBPvUYNKWy2J4cVgeUEhR0GQw3NneSNaeIXt_atW79DdivefB0L5B8TxWIOjGW3jQ704sxrATAqf9IB8kEMPUIwetr2Rv_fDBGys1ENfIBZUQZNvo0D17OsjU_ngQdKOqba4DzEhEFZ9645ltrGzNvdbT3-4XRqrSRA==" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<h3 id="user-journey-map">User Journey Map</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-9f3180b3" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp9U8Fu2zAMvesruO7SAC2wuFjW7TAUSbPbumDteuqFtVlZs00alNI0GPbvoxI0cwvUPhCG-PjeE0ldxISa1l3r3qWaOoK-xcAuNoF7VOzgHsvGq6y5WkgrCurvj4vp5xMopue7MIEBOtZYySawhwdsIw0yO4pSlElh-nGQeBBO5X_qYmasReY_O5u4Ac5iCmXokRP8cWDf_JW197PZJyIsPuyzohXpi8zg_KYOZcMUIxTur3NYJoP9JLSUc5m0h6PLEEt5JN3CqsZIR7vyPQZOvz7_fYFvgSuYt-JhJTHB8eQt4DURrFS8Zt056gj0SuyyBDc_FhlEXB1cZUhu8LinX3FffIWPwWMKwiNiC-m3FiqC5RN2fUtxBHwbaAOXAb0NJb42t2SP3tbIZjTu77pGJdPklLFvqy2fehsgwfcccnvHrM1Fmg61gZWZOFhjSQQafJ0yH9fIJVWwjlbyW9a2kNs73oRUQ1LkaGuWHcW0ba3Ld4w22_xGQK2L7KPtqwIdrukuTMOezz8iBwrl" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<h3 id="system-architecture">System Architecture</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-da4bd874" class="mermaid">
+    
+flowchart TB
+    subgraph "Frontend Layer"
+        A[HTML Layout] --&gt; B[CSS Styling]
+        B --&gt; C[JavaScript Logic]
+    end
+    
+    subgraph "Diagram Engine"
+        D[Mermaid Parser] --&gt; E[SVG Renderer]
+        F[PlantUML Engine] --&gt; G[Kroki Service]
+        H[Diagram Cache] --&gt; I[Lazy Loading]
+    end
+    
+    subgraph "User Interface"
+        J[Interactive Controls] --&gt; K[Copy/Download]
+        L[Modal Viewer] --&gt; M[Fullscreen Mode]
+        N[Progress Tracking] --&gt; O[Reading Analytics]
+    end
+    
+    C --&gt; D
+    C --&gt; F
+    C --&gt; J
+    E --&gt; L
+    G --&gt; L
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style D fill:rgba(16,185,129,0.1),stroke:#10b981
+    style J fill:rgba(245,158,11,0.1),stroke:#f59e0b
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="️-plantuml--kroki">️ PlantUML &amp; Kroki</h2>
+
+<p>For complex system diagrams and architectural visualization, we use PlantUML through Kroki service.</p>
+
+<h3 id="system-design-example">System Design Example</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-c00b9691" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNpNkkGP0zAQhe_-FbN7YiX20K5AsAe0JYlQ1U0UtdsTcHCdSWrVGVcet7BC_HcmNtDmEFnzZd5748kTRx3iaXTqJu5xRDg6bUnxwdJRBz3CTpvDEPyJusI7HyAMuzfz2ce3MJ99SK87uPqa97rzPywN0GvHeEWShPGBMMDs3RXoPUVzkZ6_F9X5pP_wcKfUTYe9JYR1Vbwsmi_PFRinmZU6Si49INx-dn6A1unY-zDewi8F8nzdsvgsKWLotcHvoBm2y4xKq4fJuKJBlBMqq4wKyYIUodYk2qMcEy7qjFtRExNNBqH2ZKMPibe1-n2VqPoptqQdbDCcrUH-n2oV_MH-K6fW1eavc9lkq7LJhYUIvEZrOJUXzeSwXcL9_SdJC4-wRuowMHR5GlZSneBqI7ANXmwZeboYitv6WRV1wiKR8Nl2Qk2eV7UZLhqBL0HmYDheZlUS6tJcorPnyVnWgFE2QT4iBDvsI_g-h5N7ZMvpKjm-OvkfvlFF-0msg7Rszm0O-9SVUq9FWe8cyor9qYOQJpRe9SQn-UX_AI2D22k=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<h3 id="data-flow-diagram">Data Flow Diagram</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-1d028593" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNpdkjFPwzAQhXf_iqMTlejQVCDogKomEUJZKiK6Xx03OSWxI_tCBb8e22nVggcPfs_fuzvdxjFaHvtO3HGjegVDh6SFa0kPaLGHA8q2tmbUVWo6Y8HWh_tk-fIAyfI5XnO4cbsGK3MiXcMRO6dulIiQxmplYfl4IxyNZnlFJ0-emgT-ajUXAiV75dMpK7ydSdKAmmG27UwNO6zVDNDBdvdXzQjrwM51TXqyZPlfS2FNS1Aq-0VychSlqJDxgE7BLEXZTM-pECEeFq8-Zg17csQw-GSx3YXHLF_DuyYm7OhHQTVFO5HlQU3XkDZKtiADUGDHENHQEAvwJ4XFGfKheLR6MlZQ7t-E8iM823tyLvonbFGufe26usSBNJWKelH-BwbS9WcoKBKtcmPHwkNiqef2MnJ-A74v3Nijl8IEfGJjTj5Js9IsNv6n35tfydO1UA==" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<h3 id="️-architecture-overview">️ Architecture Overview</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-40086114" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNptUk1PwkAUvPdXPDlJIgdKNOrBEKrE8BEbCifj4bVdyoZ2X7O7RYnxv_u6NAiVJu1OMtOZeS87NBa1rYrcu7IbUQgoc5TKM1upStRYQIzJNtNUqTSgnDToLL72-w834Pfv3acLJ2qzwZQ-pcpgjbkRJ4yzSEgroaF_e0KsSdnkz9q_Y1e_9h8Mup5XcjxmAjpjzTqh0g58e8BPQkVJSigL76_L-ewD0EAN2mQQRY7js01NcIdRomVpnWISeT8ngc8Ss7pftDdWFBdi50IXKFP373zeZsMclV01xcJVm55q2krHTRdnsWOBttLCXAgMqNzDqLKW1GGkUVsxk9nGxvTl6Nk_OtSUsbWBEepDr3-S5VvgGD7rWvVGodd7cuvj12Fe1OSAeOwG8YQN4nkaxP0aNDui8IjqBE-RFWCpBFqzGTxCQMpIXjh3MXaf800604Qr1ryoDapEpLCTRsYyl3Z_JpouaqOcqrQXo2Gd5nsjdO01ZMSX_RdFcu0j" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<hr />
+
+<h2 id="code-features">Code Features</h2>
+
+<h3 id="enhanced-code-blocks">Enhanced Code Blocks</h3>
+
+<p>All code blocks include one-click copy functionality:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="c1">// Interactive diagram initialization</span>
+<span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">DOMContentLoaded</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Configure Mermaid with transparent backgrounds</span>
+    <span class="nx">mermaid</span><span class="p">.</span><span class="nf">initialize</span><span class="p">({</span>
+        <span class="na">theme</span><span class="p">:</span> <span class="dl">'</span><span class="s1">base</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">themeVariables</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">primaryColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">rgba(102, 126, 234, 0.1)</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">primaryTextColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#1f2937</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">primaryBorderColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#667eea</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">background</span><span class="p">:</span> <span class="dl">'</span><span class="s1">transparent</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">mainBkg</span><span class="p">:</span> <span class="dl">'</span><span class="s1">transparent</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">secondaryBkg</span><span class="p">:</span> <span class="dl">'</span><span class="s1">rgba(102, 126, 234, 0.05)</span><span class="dl">'</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+    
+    <span class="c1">// Enhanced visibility and performance</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Diagrams ready with transparent backgrounds! </span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="css-styling">CSS Styling</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="c">/* Transparent diagram backgrounds */</span>
+<span class="nc">.mermaid-diagram</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nb">transparent</span> <span class="cp">!important</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">102</span><span class="p">,</span> <span class="m">126</span><span class="p">,</span> <span class="m">234</span><span class="p">,</span> <span class="m">0.2</span><span class="p">);</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+    <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">16px</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">102</span><span class="p">,</span> <span class="m">126</span><span class="p">,</span> <span class="m">234</span><span class="p">,</span> <span class="m">0.1</span><span class="p">);</span>
+    <span class="nl">transition</span><span class="p">:</span> <span class="nb">all</span> <span class="m">0.3s</span> <span class="nb">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.mermaid</span> <span class="nt">svg</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nb">transparent</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Enhanced color visibility */</span>
+<span class="nc">.mermaid</span> <span class="nc">.node</span> <span class="nt">rect</span> <span class="p">{</span>
+    <span class="py">fill</span><span class="p">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">102</span><span class="p">,</span> <span class="m">126</span><span class="p">,</span> <span class="m">234</span><span class="p">,</span> <span class="m">0.1</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+    <span class="py">stroke</span><span class="p">:</span> <span class="nx">#667eea</span> <span class="cp">!important</span><span class="p">;</span>
+    <span class="py">stroke-width</span><span class="p">:</span> <span class="m">2px</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="python-example">Python Example</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="c1"># Blog enhancement script
+</span><span class="k">def</span> <span class="nf">enhance_diagrams</span><span class="p">():</span>
+    <span class="sh">"""</span><span class="s">
+    Enhance diagram visibility and performance
+    </span><span class="sh">"""</span>
+    <span class="n">enhancements</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sh">'</span><span class="s">background</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">transparent</span><span class="sh">'</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">colors</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">high-contrast</span><span class="sh">'</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">performance</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">lazy-loading</span><span class="sh">'</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">interaction</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">copy-download-zoom</span><span class="sh">'</span>
+    <span class="p">}</span>
+    
+    <span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">status</span> <span class="ow">in</span> <span class="n">enhancements</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s"> </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s">: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="sh">"</span><span class="s">All diagram enhancements active! </span><span class="sh">"</span>
+
+<span class="c1"># Execute enhancements
+</span><span class="n">result</span> <span class="o">=</span> <span class="nf">enhance_diagrams</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+
+<h2 id="navigation--ux">Navigation &amp; UX</h2>
+
+<h3 id="smart-table-of-contents">Smart Table of Contents</h3>
+
+<p>The TOC system provides:</p>
+<ul>
+  <li><strong>Auto-generation</strong> from headings</li>
+  <li><strong>Scroll spy</strong> highlighting</li>
+  <li><strong>Click navigation</strong> to sections</li>
+  <li><strong>Responsive design</strong> for mobile</li>
+  <li><strong>Smooth scrolling</strong> animations</li>
+</ul>
+
+<h3 id="progress-tracking">Progress Tracking</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-1acefd46" class="mermaid">
+    
+pie title Reading Progress Features
+    "Progress Bar" : 30
+    "Reading Time" : 25
+    "Completion Rate" : 20
+    "Section Tracking" : 15
+    "Analytics" : 10
+
+  </div>
+</div>
+
+<h3 id="user-flow">User Flow</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-7a68f584" class="mermaid">
+    
+stateDiagram-v2
+    [*] --&gt; Reading
+    Reading --&gt; NavigatingTOC : Click TOC item
+    Reading --&gt; CopyingCode : Click copy button
+    Reading --&gt; ViewingDiagram : Click diagram
+    
+    NavigatingTOC --&gt; Reading : Smooth scroll
+    CopyingCode --&gt; Reading : Code copied
+    ViewingDiagram --&gt; FullscreenMode : Zoom in
+    FullscreenMode --&gt; Reading : Close modal
+    
+    Reading --&gt; [*] : Article complete
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="mobile-experience">Mobile Experience</h2>
+
+<h3 id="responsive-design">Responsive Design</h3>
+
+<p>The blog adapts perfectly to all screen sizes:</p>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-f340628b" class="mermaid">
+    
+graph TD
+    A[Device Detection] --&gt; B{Screen Size}
+    B --&gt;|Desktop| C[Two-Column Layout]
+    B --&gt;|Tablet| D[Adaptive Layout]
+    B --&gt;|Mobile| E[Single Column]
+    
+    C --&gt; F[Side TOC]
+    D --&gt; G[Collapsible TOC]
+    E --&gt; H[Hidden TOC]
+    
+    F --&gt; I[Full Features]
+    G --&gt; J[Touch Optimized]
+    H --&gt; K[Swipe Navigation]
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style C fill:rgba(16,185,129,0.1),stroke:#10b981
+    style D fill:rgba(245,158,11,0.1),stroke:#f59e0b
+    style E fill:rgba(239,68,68,0.1),stroke:#ef4444
+
+  </div>
+</div>
+
+<h3 id="touch-interactions">Touch Interactions</h3>
+
+<p>Mobile-specific features:</p>
+<ul>
+  <li><strong>Touch-friendly</strong> buttons and controls</li>
+  <li><strong>Swipe gestures</strong> for navigation</li>
+  <li><strong>Optimized spacing</strong> for thumb interaction</li>
+  <li><strong>Fast loading</strong> with lazy loading</li>
+</ul>
+
+<hr />
+
+<h2 id="design-system">Design System</h2>
+
+<h3 id="color-palette">Color Palette</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-0935e3c9" class="mermaid">
+    
+graph LR
+    A[Primary Colors] --&gt; B[#667eea - Main Blue]
+    A --&gt; C[#764ba2 - Purple Accent]
+    A --&gt; D[#10b981 - Success Green]
+    A --&gt; E[#f59e0b - Warning Orange]
+    A --&gt; F[#ef4444 - Error Red]
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style B fill:rgba(102,126,234,0.1),stroke:#667eea
+    style C fill:rgba(118,75,162,0.1),stroke:#764ba2
+    style D fill:rgba(16,185,129,0.1),stroke:#10b981
+    style E fill:rgba(245,158,11,0.1),stroke:#f59e0b
+    style F fill:rgba(239,68,68,0.1),stroke:#ef4444
+
+  </div>
+</div>
+
+<h3 id="visual-hierarchy">Visual Hierarchy</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-9bcd0821" class="mermaid">
+    
+flowchart TB
+    A[H1 - Main Title] --&gt; B[H2 - Section Headers]
+    B --&gt; C[H3 - Subsections]
+    C --&gt; D[H4 - Details]
+    
+    E[Body Text] --&gt; F[Code Blocks]
+    F --&gt; G[Diagrams]
+    G --&gt; H[Interactive Elements]
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style B fill:rgba(16,185,129,0.1),stroke:#10b981
+    style C fill:rgba(245,158,11,0.1),stroke:#f59e0b
+    style D fill:rgba(239,68,68,0.1),stroke:#ef4444
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="best-practices">Best Practices</h2>
+
+<h3 id="content-creation">Content Creation</h3>
+
+<ol>
+  <li><strong>Use clear headings</strong> for better TOC generation</li>
+  <li><strong>Add meaningful alt text</strong> to images</li>
+  <li><strong>Format code blocks</strong> properly for copy functionality</li>
+  <li><strong>Include relevant tags</strong> for better discoverability</li>
+  <li><strong>Use diagrams</strong> to illustrate complex concepts</li>
+</ol>
+
+<h3 id="diagram-guidelines">Diagram Guidelines</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="c">&lt;!--  Good diagram practice --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mermaid-diagram"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"mermaid-d590a371"</span> <span class="na">class=</span><span class="s">"mermaid"</span><span class="nt">&gt;</span>
+    
+graph TD
+    A[Clear Labels] --&gt; B[Logical Flow]
+    B --&gt; C[Meaningful Colors]
+    C --&gt; D[Proper Spacing]
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style B fill:rgba(16,185,129,0.1),stroke:#10b981
+
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="performance-tips">Performance Tips</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-eabe070b" class="mermaid">
+    
+mindmap
+  root((Performance))
+    Images
+      Lazy Loading
+      Optimized Sizes
+      WebP Format
+    Diagrams
+      Cached SVG
+      Lazy Rendering
+      Efficient Code
+    Code
+      Syntax Highlighting
+      Copy Functionality
+      Minimal JS
+    Navigation
+      Smooth Scrolling
+      Efficient TOC
+      Progress Tracking
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="️-technical-implementation">️ Technical Implementation</h2>
+
+<h3 id="️-architecture-stack">️ Architecture Stack</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-41c45792" class="mermaid">
+    
+graph TB
+    subgraph "Frontend"
+        A[Jekyll] --&gt; B[Liquid Templates]
+        B --&gt; C[Sass/CSS]
+        C --&gt; D[JavaScript ES6+]
+    end
+    
+    subgraph "Diagram Engine"
+        E[Mermaid.js] --&gt; F[PlantUML]
+        F --&gt; G[Kroki API]
+        G --&gt; H[SVG Rendering]
+    end
+    
+    subgraph "Features"
+        I[Copy to Clipboard] --&gt; J[Modal Lightbox]
+        J --&gt; K[Progress Tracking]
+        K --&gt; L[Responsive Design]
+    end
+    
+    D --&gt; E
+    D --&gt; I
+    H --&gt; J
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style E fill:rgba(16,185,129,0.1),stroke:#10b981
+    style I fill:rgba(245,158,11,0.1),stroke:#f59e0b
+
+  </div>
+</div>
+
+<h3 id="data-flow">Data Flow</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-0f1a914a" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNplUs1u1DAQvvsphp6oRA-7FQhyQBW7BSEKQlu1Jy4Tx0lG69iRZ8KqPD1jG7VZcUksf7-254YFkyyTN69kdJOD2SMFw0cKMyacoEV7HFJcQreLPiZIQ_t6u_nwBrab9-VzCSs2j9jFE4UBevTsVkixsDEFl2DzdgX0MYh9sd6-U9dt9r--vjRGSLyDTz4O8NOj9DFNsEdB-OzjyRi0osIHdsmom5ClGYPARRXg4C4AuSzO8T3hkMNvw0ChkurynPYtxSPBvUu_yVZW2Tkn7fY_CqR_Y3IVuPpYIht4JCaBNpeZI4vJuxmtWQ18DSSEnv446GojNhXLrJLVaHzo8uGDPHy_Axs7Z2qvldHByZIC3D9-Welrh4PKtdOJZFRxYGJxWpvlyes7PVfS9g3cRewgzkKTVur0UOyEjUJru5Jk0Y7KSI7jkqzjZ598AQ3siXWQnsCFEYNVoibnWGNCFAeJhlEg9v_6QwO7_5r9CrcvYh0PrlLv-qKsV6BCH5fuqkUubfJRi_bgPGGro8P18cyNYjrmfwGiTQDM" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<h3 id="performance-metrics">Performance Metrics</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-43007ff7" class="mermaid">
+    
+xychart-beta
+    title "Performance Improvements"
+    x-axis [Load Time, Render Time, Interactive, Complete]
+    y-axis "Milliseconds" 0 --&gt; 3000
+    bar [2800, 1200, 800, 400]
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="advanced-features">Advanced Features</h2>
+
+<h3 id="search--discovery">Search &amp; Discovery</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-743e0d9d" class="mermaid">
+    
+graph TD
+    A[Search Input] --&gt; B[Content Indexing]
+    B --&gt; C[Relevance Scoring]
+    C --&gt; D[Results Ranking]
+    
+    E[Tags] --&gt; F[Category Filtering]
+    F --&gt; G[Related Posts]
+    G --&gt; H[Recommendations]
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style E fill:rgba(16,185,129,0.1),stroke:#10b981
+
+  </div>
+</div>
+
+<h3 id="analytics-integration">Analytics Integration</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-a5338eed" class="mermaid">
+    
+sequenceDiagram
+    participant U as User
+    participant B as Blog
+    participant A as Analytics
+    participant D as Dashboard
+    
+    U-&gt;&gt;B: Read post
+    B-&gt;&gt;A: Track engagement
+    A-&gt;&gt;D: Update metrics
+    D-&gt;&gt;B: Provide insights
+    B-&gt;&gt;U: Personalized content
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="future-enhancements">Future Enhancements</h2>
+
+<h3 id="roadmap">Roadmap</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-9fec83cc" class="mermaid">
+    
+timeline
+    title Blog Enhancement Roadmap
+    
+    2025 Q1 : Interactive Tutorials
+           : Advanced Search
+           : PWA Features
+    
+    2025 Q2 : AI-Powered Recommendations
+           : Voice Navigation
+           : Collaboration Tools
+    
+    2025 Q3 : Multi-language Support
+           : Advanced Analytics
+           : Custom Themes
+    
+    2025 Q4 : Real-time Collaboration
+           : Advanced Integrations
+           : Performance Optimization
+
+  </div>
+</div>
+
+<h3 id="innovation-pipeline">Innovation Pipeline</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-0b087f13" class="mermaid">
+    
+mindmap
+  root((Innovation))
+    AI Integration
+      Content Suggestions
+      Auto-generated TOC
+      Smart Recommendations
+    Interactive Features
+      Live Code Execution
+      Real-time Collaboration
+      Comment System
+    Performance
+      Edge Computing
+      Advanced Caching
+      Predictive Loading
+    Accessibility
+      Screen Reader Support
+      Voice Navigation
+      Keyboard Shortcuts
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="support--resources">Support &amp; Resources</h2>
+
+<h3 id="-getting-help">🆘 Getting Help</h3>
+
+<ul>
+  <li><strong>Documentation</strong>: This comprehensive guide</li>
+  <li><strong>Issues</strong>: <a href="https://github.com/samadeep/samadeep.github.io/issues">GitHub Issues</a></li>
+  <li><strong>Discussions</strong>: <a href="https://github.com/samadeep/samadeep.github.io/discussions">GitHub Discussions</a></li>
+  <li><strong>Contact</strong>: <a href="mailto:samadeepsengupta@gmail.com">samadeepsengupta@gmail.com</a></li>
+</ul>
+
+<h3 id="quick-links">Quick Links</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-4530db60" class="mermaid">
+    
+graph LR
+    A[Blog Guide] --&gt; B[Feature Demos]
+    A --&gt; C[Best Practices]
+    A --&gt; D[Technical Docs]
+    
+    B --&gt; E[Interactive Examples]
+    C --&gt; F[Content Guidelines]
+    D --&gt; G[API Reference]
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea
+    style B fill:rgba(16,185,129,0.1),stroke:#10b981
+    style C fill:rgba(245,158,11,0.1),stroke:#f59e0b
+    style D fill:rgba(239,68,68,0.1),stroke:#ef4444
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This blog platform represents the cutting edge of content creation and consumption technology. With <strong>transparent diagram backgrounds</strong>, <strong>enhanced color visibility</strong>, and <strong>interactive features</strong>, it provides an unparalleled reading and writing experience.</p>
+
+<h3 id="key-benefits">Key Benefits</h3>
+
+<ul>
+  <li><strong>Beautiful Design</strong> with transparent backgrounds</li>
+  <li><strong>High Performance</strong> with lazy loading</li>
+  <li><strong>Mobile-First</strong> responsive design</li>
+  <li><strong>Developer-Friendly</strong> with modern tools</li>
+  <li><strong>User-Centric</strong> with intuitive navigation</li>
+</ul>
+
+<h3 id="start-creating">Start Creating</h3>
+
+<p>Ready to create amazing content? Use the enhanced post creation script:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c"># Create a new post with diagrams</span>
+ruby scripts/new_post.rb <span class="se">\</span>
+  <span class="nt">--title</span> <span class="s2">"Your Amazing Post"</span> <span class="se">\</span>
+  <span class="nt">--template</span> technical <span class="se">\</span>
+  <span class="nt">--categories</span> <span class="s2">"Tech,Tutorial"</span> <span class="se">\</span>
+  <span class="nt">--tags</span> <span class="s2">"guide,diagrams,tutorial"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+
+<p>** Happy blogging!** This platform is designed to make your content creation journey as smooth and enjoyable as possible. Explore, experiment, and create amazing content with our enhanced features!</p>
+
+<p><em>Questions or feedback? Connect with me on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://linkedin.com/in/samadeep">LinkedIn</a>!</em></p>]]></content><author><name>Samadeep Sengupta</name></author><category term="Guide" /><category term="Blog" /><category term="Features" /><category term="guide" /><category term="diagrams" /><category term="mermaid" /><category term="plantuml" /><category term="features" /><category term="tutorial" /><summary type="html"><![CDATA[The ultimate guide to using this blog's features: interactive diagrams, Mermaid, PlantUML, Kroki, copy buttons, progress tracking, and more!]]></summary></entry><entry><title type="html">Enhanced Mermaid Diagrams: Transparent Backgrounds &amp;amp; Vibrant Colors</title><link href="https://samadeep.github.io/posts/mermaid-test/" rel="alternate" type="text/html" title="Enhanced Mermaid Diagrams: Transparent Backgrounds &amp;amp; Vibrant Colors" /><published>2025-07-06T08:41:24-04:00</published><updated>2025-07-06T08:41:24-04:00</updated><id>https://samadeep.github.io/posts/mermaid-test</id><content type="html" xml:base="https://samadeep.github.io/posts/mermaid-test/"><![CDATA[<h1 id="enhanced-mermaid-diagrams-transparent-backgrounds--vibrant-colors">Enhanced Mermaid Diagrams: Transparent Backgrounds &amp; Vibrant Colors</h1>
+
+<p>Welcome to the new and improved Mermaid diagram experience! All diagrams now feature <strong>transparent backgrounds</strong> and <strong>enhanced color visibility</strong> for seamless integration with your reading experience.</p>
+
+<h2 id="whats-new">What’s New</h2>
+
+<ul>
+  <li><strong>Transparent backgrounds</strong> for clean integration</li>
+  <li><strong>Enhanced color visibility</strong> with high contrast</li>
+  <li><strong>Interactive controls</strong> (zoom, copy, download)</li>
+  <li><strong>Mobile-responsive</strong> design</li>
+  <li><strong>Performance optimized</strong> with lazy loading</li>
+</ul>
+
+<hr />
+
+<h2 id="flowchart-examples">Flowchart Examples</h2>
+
+<h3 id="basic-decision-flow">Basic Decision Flow</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-ea7b4e29" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNpdksGOEzEMhu95CqO9tBIHOisKtIddLfTAZYW2iNNevBlPJ2rGLo7bUYV4dzzTAgM5JJJ_-_MfJ_fFUO3Y5fDKWuoIDhkTh7JPfEDFDl4w7ncqR64_ShYF3b3MqsWH11At3o_bHCbZpcVa-sQ7aDAXmigjIooyKSzeToRG2OJfdLV0ajXwb2_nYZKH0dIp2Rl-BPD18J-vm-XyHRFWby6qaE36jzKJf21T3DOVAlX46T2GEYTVdjjgi0p0ZR1SA7PPBT6hIXzDnOq7OfiIGGZnKvORtromj0nrS2iLJ4InKsds5XeIuIZHsdSkiJaE14F8ODBjuXK2rfSwURW9ljzR9yMVg0fqJ_CaDGMbHJeasNo49Y_bYnIIgcUINO1agxVsuEWOVHtZTMXbQpOlf-Y-WQumyMUHS2xQ7Jz9yZ4ZnZi6g8rJq07DnUe7F2ymZqA-kJk_IQ1mwRvUl9IRqmR6ho6ix1Ppwr079a_1C1wXy3M=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<h3 id="system-architecture">System Architecture</h3>
+
+<div class="diagram-container">
+  <div id="kroki-plantuml-ae0a25ef" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp9VFFv2jAQfs-vuLGXVWqlkmqs7cPUJBQ2CdhE2jdeLsYkFomNbDOGpv33nW0QIbSLlORy9_m77-7sPBmL2m6bOvpgK95w2NQoZGTWQm5QYwMFsnWp1VYuM1UrDbosPsX9h2uI-_f-cQUttKlwqXZClrDC2vBWxFMwpSXX0P_cCqyUtOxEHQ-INXb8d3dXUQu3ISFYcvgTAV1pR9bHweAL5xjfhqjSS67PIi3_SyXYWnJjII7-tlMw1WyU5NK-l6R_Wzzc999KEiLvJzmq74001cvlEia457p3yHTK3JtzZBayo8P0AA3Msy4st2g5TFESa0MeD8unXVjy8ztktTgCkuxMjCvQacm5_iUYN2_IcQRjSrXDfWAYXyC2tHOkFQytUDKAXl--dWHp1gjfj4kqBfOwdNIFDdFigYYfu0OgYXom-fm35Vpi_T_N2XDml9K7GxqJmkNulSYyjxnlF_UQ-57KCZ1PLiimSgoioE3uAdMfMydwnsHNzVc3gXzqLWp1EnzUsigZB9M1xj38F9WfTrxFRUbD1JtONN3eJnGjPCycRUnwuXyRVDR8qzagVrQ34BGeZYWS8SWsDvtrIXfCVqRbGmHIYRfydJTB2H1NBQSeQlmrGkdFKh-psWyrObjBl2HwBy48G3RYq0VZWbfUSSYZx-mYw3QWckXHwzCssRC1sPvoicTR_-YfiXZoVw==" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+  </div>
+</div>
+
+<hr />
+
+<h2 id="sequence-diagrams">Sequence Diagrams</h2>
+
+<h3 id="user-authentication-flow">User Authentication Flow</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-3c54f24d" class="mermaid">
+    
+sequenceDiagram
+    participant U as User
+    participant F as Frontend
+    participant A as Auth Service
+    participant D as Database
+    participant C as Cache
+    
+    U-&gt;&gt;F: Login Request
+    F-&gt;&gt;A: Validate Credentials
+    A-&gt;&gt;D: Check User Data
+    D--&gt;&gt;A: Return User Info
+    A-&gt;&gt;C: Store Session
+    C--&gt;&gt;A: Confirm Storage
+    A--&gt;&gt;F: Return JWT Token
+    F--&gt;&gt;U: Login Success
+    
+    Note over U,F: Transparent background
+    Note over A,D: Enhanced colors
+    Note over C: Performance optimized
+
+  </div>
+</div>
+
+<h3 id="blog-reading-experience">Blog Reading Experience</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-86f16dd3" class="mermaid">
+    
+sequenceDiagram
+    participant R as Reader
+    participant B as Blog
+    participant D as Diagram Engine
+    participant K as Kroki Service
+    
+    R-&gt;&gt;B: Visit Blog Post
+    B-&gt;&gt;D: Initialize Diagrams
+    D-&gt;&gt;K: Request PlantUML Render
+    K--&gt;&gt;D: Return SVG
+    D-&gt;&gt;B: Display with Transparent BG
+    B--&gt;&gt;R: Show Enhanced Content
+    R-&gt;&gt;B: Interact with Diagrams
+    B-&gt;&gt;D: Enable Copy/Zoom Features
+    D--&gt;&gt;R: Provide Interactive Controls
+    
+    Note over R,B: Seamless integration
+    Note over D,K: Cloud-based rendering
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="user-journey-maps">User Journey Maps</h2>
+
+<h3 id="blog-discovery-journey">Blog Discovery Journey</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-5e4060de" class="mermaid">
+    
+journey
+    title Enhanced Blog Reading Experience
+    section Discovery
+      Find Blog Post      : 5: Reader
+      Notice Progress Bar : 4: Reader
+      See Transparent TOC : 3: Reader
+    section Engagement
+      Use TOC Navigation  : 5: Reader
+      Copy Code Examples  : 4: Reader
+      Interact with Diagrams : 5: Reader
+    section Sharing
+      Copy Diagram SVG    : 4: Reader
+      Share on Social     : 3: Reader
+      Bookmark for Later  : 5: Reader
+
+  </div>
+</div>
+
+<h3 id="content-creation-journey">Content Creation Journey</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-5660d20f" class="mermaid">
+    
+journey
+    title Content Creator Experience
+    section Planning
+      Choose Template     : 5: Creator
+      Plan Content Structure : 4: Creator
+      Design Diagrams     : 3: Creator
+    section Creation
+      Write Content       : 5: Creator
+      Add Mermaid Diagrams: 4: Creator
+      Test Transparency   : 5: Creator
+    section Publishing
+      Build Local Preview : 4: Creator
+      Deploy to GitHub    : 3: Creator
+      Monitor Performance : 5: Creator
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="charts--visualizations">Charts &amp; Visualizations</h2>
+
+<h3 id="feature-usage-statistics">Feature Usage Statistics</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-582ff2d8" class="mermaid">
+    
+pie title Blog Feature Usage
+    "Mermaid Diagrams" : 35
+    "Code Copy Buttons" : 25
+    "TOC Navigation" : 20
+    "Progress Tracking" : 15
+    "Image Lightbox" : 5
+
+  </div>
+</div>
+
+<h3 id="performance-metrics">Performance Metrics</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-4d46531f" class="mermaid">
+    
+xychart-beta
+    title "Page Load Performance"
+    x-axis [Initial Load, Diagrams Render, Interactive, Complete]
+    y-axis "Milliseconds" 0 --&gt; 2000
+    bar [1200, 800, 400, 200]
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="state-diagrams">State Diagrams</h2>
+
+<h3 id="diagram-loading-states">Diagram Loading States</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-9fc663f2" class="mermaid">
+    
+stateDiagram-v2
+    [*] --&gt; Loading
+    Loading --&gt; Parsing : Valid syntax
+    Loading --&gt; Error : Invalid syntax
+    
+    Parsing --&gt; Rendering : Parse success
+    Parsing --&gt; Error : Parse failure
+    
+    Rendering --&gt; Interactive : Render complete
+    Rendering --&gt; Error : Render failure
+    
+    Interactive --&gt; Fullscreen : User clicks zoom
+    Interactive --&gt; Copying : User clicks copy
+    Interactive --&gt; Downloading : User clicks download
+    
+    Fullscreen --&gt; Interactive : Close modal
+    Copying --&gt; Interactive : Copy complete
+    Downloading --&gt; Interactive : Download complete
+    
+    Error --&gt; Loading : Retry
+    Interactive --&gt; [*] : Component unmount
+
+  </div>
+</div>
+
+<h3 id="blog-post-states">Blog Post States</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-dcacad16" class="mermaid">
+    
+stateDiagram-v2
+    [*] --&gt; Draft
+    Draft --&gt; Preview : Local build
+    Preview --&gt; Draft : Edit content
+    
+    Preview --&gt; Published : Deploy
+    Published --&gt; Updated : New content
+    Updated --&gt; Published : Build complete
+    
+    Published --&gt; Archived : Old content
+    Archived --&gt; Published : Restore
+    
+    Published --&gt; [*] : Delete
+    
+    note right of Preview : Transparent backgrounds tested
+    note left of Published : Enhanced colors visible
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="advanced-diagrams">Advanced Diagrams</h2>
+
+<h3 id="mind-map---blog-features">Mind Map - Blog Features</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-aa241b91" class="mermaid">
+    
+mindmap
+  root((Enhanced Blog))
+    Diagrams
+      Mermaid
+        Transparent BG
+        Enhanced Colors
+        Interactive Controls
+      PlantUML
+        Kroki Integration
+        Cloud Rendering
+        SVG Output
+      Charts
+        Data Visualization
+        Performance Metrics
+        Usage Analytics
+    Features
+      Navigation
+        Smart TOC
+        Scroll Spy
+        Progress Bar
+      Interaction
+        Copy Buttons
+        Image Lightbox
+        Responsive Design
+      Performance
+        Lazy Loading
+        Caching
+        Optimization
+    Design
+      Colors
+        High Contrast
+        Accessibility
+        Brand Consistency
+      Layout
+        Mobile First
+        Responsive
+        Clean Typography
+
+  </div>
+</div>
+
+<h3 id="timeline---development-process">Timeline - Development Process</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-e74a4053" class="mermaid">
+    
+timeline
+    title Blog Enhancement Timeline
+    
+    2025 Q1 : Basic Setup
+           : Jekyll Configuration
+           : Theme Integration
+    
+    2025 Q2 : Diagram Support
+           : Mermaid Integration
+           : PlantUML via Kroki
+           : Basic Styling
+    
+    2025 Q3 : Enhanced Features
+           : Transparent Backgrounds
+           : Interactive Controls
+           : Performance Optimization
+    
+    2025 Q4 : Advanced Capabilities
+           : Mobile Optimization
+           : Accessibility Features
+           : Analytics Integration
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="️-architecture-overview">️ Architecture Overview</h2>
+
+<h3 id="component-relationships">Component Relationships</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-5c741a11" class="mermaid">
+    
+flowchart LR
+    subgraph "User Interface"
+        A[Blog Post] --&gt; B[Diagram Container]
+        B --&gt; C[Interactive Controls]
+        C --&gt; D[Modal Viewer]
+    end
+    
+    subgraph "Diagram Engine"
+        E[Mermaid Parser] --&gt; F[SVG Renderer]
+        G[PlantUML Parser] --&gt; H[Kroki Service]
+        F --&gt; I[Transparent Background]
+        H --&gt; I
+    end
+    
+    subgraph "Enhancement Layer"
+        J[Color Enhancement] --&gt; K[Contrast Optimization]
+        K --&gt; L[Accessibility Features]
+        I --&gt; J
+    end
+    
+    B --&gt; E
+    B --&gt; G
+    L --&gt; D
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea,stroke-width:2px
+    style E fill:rgba(16,185,129,0.1),stroke:#10b981,stroke-width:2px
+    style J fill:rgba(245,158,11,0.1),stroke:#f59e0b,stroke-width:2px
+
+  </div>
+</div>
+
+<h3 id="data-flow-architecture">Data Flow Architecture</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-7f958278" class="mermaid">
+    
+flowchart TD
+    A[Markdown Content] --&gt; B[Jekyll Processing]
+    B --&gt; C[Liquid Templates]
+    C --&gt; D[HTML Generation]
+    
+    D --&gt; E[Mermaid Blocks]
+    D --&gt; F[PlantUML Blocks]
+    
+    E --&gt; G[Client-side Rendering]
+    F --&gt; H[Server-side Rendering]
+    
+    G --&gt; I[Transparent SVG]
+    H --&gt; I
+    
+    I --&gt; J[Enhanced Styling]
+    J --&gt; K[Interactive Features]
+    K --&gt; L[User Display]
+    
+    style A fill:rgba(102,126,234,0.1),stroke:#667eea,stroke-width:2px
+    style G fill:rgba(16,185,129,0.1),stroke:#10b981,stroke-width:2px
+    style J fill:rgba(245,158,11,0.1),stroke:#f59e0b,stroke-width:2px
+    style L fill:rgba(239,68,68,0.1),stroke:#ef4444,stroke-width:2px
+
+  </div>
+</div>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p>The enhanced Mermaid diagram system now provides:</p>
+
+<p><strong>Transparent backgrounds</strong> for seamless integration<br />
+ <strong>Enhanced color visibility</strong> with high contrast<br />
+ <strong>Interactive controls</strong> for better user experience<br />
+ <strong>Mobile-responsive</strong> design that works everywhere<br />
+ <strong>Performance optimized</strong> with lazy loading<br />
+ <strong>Accessibility features</strong> for all users</p>
+
+<h3 id="technical-implementation">Technical Implementation</h3>
+
+<p>The diagrams use:</p>
+<ul>
+  <li><strong>CSS transparency</strong> with <code class="language-plaintext highlighter-rouge">background: transparent !important</code></li>
+  <li><strong>Enhanced color schemes</strong> with rgba() values</li>
+  <li><strong>Smooth transitions</strong> for interactive elements</li>
+  <li><strong>Responsive design</strong> that adapts to screen sizes</li>
+</ul>
+
+<h3 id="whats-next">What’s Next</h3>
+
+<ul>
+  <li><strong>More diagram types</strong> support</li>
+  <li><strong>Custom color themes</strong> for different content types</li>
+  <li><strong>Advanced interactive features</strong></li>
+  <li><strong>Performance optimizations</strong></li>
+</ul>
+
+<hr />
+
+<p>** Enjoy the enhanced diagram experience!** The transparent backgrounds and vibrant colors make diagrams feel like a natural part of your reading experience rather than separate elements.</p>
+
+<p><em>Have questions or suggestions? Connect with me on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://linkedin.com/in/samadeep">LinkedIn</a>!</em></p>]]></content><author><name>Samadeep Sengupta</name></author><category term="Demo" /><category term="Diagrams" /><category term="Features" /><category term="mermaid" /><category term="diagrams" /><category term="visualization" /><category term="transparent" /><category term="colors" /><summary type="html"><![CDATA[Showcasing enhanced Mermaid diagrams with transparent backgrounds and beautiful color schemes for better visual integration]]></summary></entry><entry><title type="html">Blog Enhancement Showcase: New Features Demo</title><link href="https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo/" rel="alternate" type="text/html" title="Blog Enhancement Showcase: New Features Demo" /><published>2025-07-06T08:36:03-04:00</published><updated>2025-07-06T08:36:03-04:00</updated><id>https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo</id><content type="html" xml:base="https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo/"><![CDATA[<h1 id="blog-enhancement-showcase-new-features-demo">Blog Enhancement Showcase: New Features Demo</h1>
 
 <p>Welcome to the enhanced version of this blog! This post serves as a comprehensive demonstration of all the exciting new features that have been added to improve your reading experience. From a dynamic table of contents to interactive elements, let’s explore what’s new!</p>
 
@@ -349,38 +1441,9 @@ pie title Blog Features
 
 <p>The blog now supports beautiful Mermaid diagrams with interactive features:</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-b64356d4" class="mermaid">
-    
-graph TD
-    A[Blog Post] --&gt; B[Reading Progress]
-    A --&gt; C[Table of Contents]
-    A --&gt; D[Interactive Features]
-    
-    B --&gt; E[Progress Bar]
-    B --&gt; F[Reading Time]
-    
-    C --&gt; G[Auto-generated TOC]
-    C --&gt; H[Scroll Spy]
-    C --&gt; I[Click Navigation]
-    
-    D --&gt; J[Copy Code Buttons]
-    D --&gt; K[Image Lightbox]
-    D --&gt; L[Back to Top]
-    
-    style A fill:#667eea,stroke:#4f46e5,color:#fff
-    style B fill:#10b981,stroke:#059669,color:#fff
-    style C fill:#f59e0b,stroke:#d97706,color:#fff
-    style D fill:#ef4444,stroke:#dc2626,color:#fff
-    style E fill:#8b5cf6,stroke:#7c3aed,color:#fff
-    style F fill:#8b5cf6,stroke:#7c3aed,color:#fff
-    style G fill:#06b6d4,stroke:#0891b2,color:#fff
-    style H fill:#06b6d4,stroke:#0891b2,color:#fff
-    style I fill:#06b6d4,stroke:#0891b2,color:#fff
-    style J fill:#f97316,stroke:#ea580c,color:#fff
-    style K fill:#f97316,stroke:#ea580c,color:#fff
-    style L fill:#f97316,stroke:#ea580c,color:#fff
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-2b9224ce" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp1VE1vm0AQvfMrpu6lkWopJqqb9FCloFayFKUooJ58WWAMKy87aHdJalX9751dcEJch4NZeeZ98J7xrXXCuKFT0TvXYofQKyF1ZPdS98KIDkpR7RtDg65TUmTANOWHeHXzEeLVdfi4gNm2bUVNT1I3sBPK4mwSKCoyGg2sPs0GO9KueqGO18wae_6rq4totldR15NG7eBPBHwlJ8ber9efEUV8OU7J1GheTWbfF62s9hqthTj6OxfpmVQ0-JbE6rK8uV6dkxgnb0u8uF8kihrIyLoFCAtJFkVH1cUDitqHlxlqDGMXk5EZ-jhicyYQZMnpypGlkB2GlYfCW3hWKUSpEGgHKUfPiHMy3wZHywa5LeGwhuJnGpj4frqZV4aUgrw_hI08P11IFScB9-JRNsJJ0mEtvX9lacNGjKicfET4gcIN_IhnXKXUH9h1jZAMzpG2I1f6XwSbztPeyaZ1Jf0OW5u70yVfLziCgvqxiiLklGSwXH71uU4n_9DT0UtFmhyC8dw-RJ58ge-6FbrioEpfbs_lbvWTdC04I7Tl35YXtO6guJcRr3AX4FnC8F_SDkJBP3W71Qyr9r5De7AOuxHiqPcItsOQvOP3FvRzqpOeHduw_WHElMQ5daHs1CvNg644yK0WuoYOaylgNwUf3aKu-S_hH1jYVYo=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
   </div>
 </div>
 
@@ -388,24 +1451,9 @@ graph TD
 
 <p>Here’s how users interact with the enhanced blog:</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-ecbd263d" class="mermaid">
-    
-journey
-    title Blog Reading Experience
-    section Arrival
-      Open Blog Post     : 5: Reader
-      See Progress Bar   : 4: Reader
-      Notice TOC         : 3: Reader
-    section Reading
-      Use TOC Navigation : 5: Reader
-      Copy Code Snippets : 4: Reader
-      View Images        : 3: Reader
-    section Interaction
-      Share Post         : 4: Reader
-      Read Related Posts : 3: Reader
-      Navigate to Next   : 5: Reader
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-1f7e0660" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNqFU01v2zAMvftXcN2lAVagdrH04zB0CXboJQ2WbqdeGJuVtdiUQDHJgmH_fXSydl6xeD4Qgt7je0-UfJsURddtk73RmlqC2KDnLK08RxRsYYnlyklYczUNTRAQtzwt8ut3UORX-zKCHjvVWIWtZwdP2CTqIXuJMgiTQP6-BzwF1vKPdDE21aLTv7gYZT2eVfWlj8gKPzKwb_Iq2tvx-JIIi_MDGqQi-Qvp7T_UvlwxpQRF9rNvg6X6jdfdMY_8fHl9lf_L44Ac9zBlo30mNCjLOtEIJx9F_AYbmNeY6GTffGDA2Yfn1Q3cR2KYNMHBPCSF09Ex4oII5hKcdK4TlAHqLNg4CR7upx2JuHrJ1FG6KxzO9CUdmme48Q7VBx4wm4a4s1IRLNjHSJoGyF89beGuRUfpdbQ7VpLuisxtON6iRqH_jatbWGlQqdpzh2L9PiiBBpjRd33JxsE2xbtajfWJa-TS5NbJur6Ftb343SNvvdaggpzsmZE94aS7xob8yMgV-DZK2FiT2CDZpezWhO2n_AVDESQo" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
   </div>
 </div>
 
@@ -413,41 +1461,9 @@ journey
 
 <p>The enhancement system follows this architecture:</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-a4b0a1cf" class="mermaid">
-    
-flowchart LR
-    subgraph "Frontend"
-        A[HTML Layout] --&gt; B[CSS Styles]
-        B --&gt; C[JavaScript Logic]
-    end
-    
-    subgraph "Features"
-        D[TOC Generator] --&gt; E[Scroll Spy]
-        F[Progress Tracker] --&gt; G[Reading Time]
-        H[Code Enhancer] --&gt; I[Copy Buttons]
-        J[Image Handler] --&gt; K[Lightbox]
-    end
-    
-    subgraph "User Actions"
-        L[Click TOC] --&gt; M[Smooth Scroll]
-        N[Copy Code] --&gt; O[Clipboard API]
-        P[View Image] --&gt; Q[Modal Display]
-    end
-    
-    C --&gt; D
-    C --&gt; F
-    C --&gt; H
-    C --&gt; J
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-    style F fill:#fce4ec
-    style H fill:#e0f2f1
-    style J fill:#f1f8e9
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-02244800" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp1VE1vm0AQvfMrpu6lkRopJmqa9FAlJm6NhRXLEKsHXxZYAzLsoGWpa1X9753dJTLGDgc07Lx98_WGx0YxqdqqdD6onFcc6pIVwml2haiZZBXELNllEluReliiBJnFn9zxw2dwx_fmdQU9dJOzFPeFyGDLyob3PIYiQSm4hPGXnmOLQiVHaveOWF3Nf3t75fRwNSXCMg5_HaBnMkjr493dV86Ze2O9KFMuTzy98ygvkp3gTQOu868fIsGqRsGFei_I-CZ-uB9fCmI97wd5y370Q1K9XKSjLsYx5mgWLQII2AFbNQLWgP4eYrwwhFAdSt4YCH0OEXP2m4WJLGoFAWZFYnDz8DQJzlQrNcdZEtGLBz85TYkplOYunQxBxI9lCWF9MIjzJJYSM6mLjyTF5JZoGQ1hK85SLZaoqLiBrM4gHqYcpiJnIulovOk5pj7ApFUKRdeWyRDiV7rwGRNp2dH4syEmKLJcxfjHuIPJScdeG9LtU6IKE-Ksa15J09adsuHPqggrRJWD7Zvtmbd6CYKLleiSLY93IU4dI5MpPC19iwn85RC1LvgeTMUGsvaHgAWmrITnoqFttyNcPOtyjQKvr78bXWmpaZu048ytqaXQmTTMzqJ5dBa11NH60TYRLCNj0Uy9qUVOHH9mLOqu41l31wjPXjPlrH1jU06OQMVBYQ24pUTgG3hUgKTkjzLfiIRWSjeWRrQvVL7RCNHQTutiG9oW0phlipFEUmmytxUgyk5dKWzt2UZUmLa0YvRvkhsRc6WI-fWX80h7S7_K_0gAm6E=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
   </div>
 </div>
 
@@ -1226,19 +2242,9 @@ npm <span class="nb">install
 
 <p>A <strong>scheduler</strong> is a system component responsible for managing the execution of tasks or processes. In the context of software systems, schedulers determine when, where, and how tasks are executed, optimizing resource utilization and ensuring system responsiveness.</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-878f7a60" class="mermaid">
-    
-graph TB
-    A[Task Queue] --&gt; B[Scheduler]
-    B --&gt; C[Worker Pool]
-    C --&gt; D[Task Execution]
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-d901ea2f" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp1VE1v2zAMvftXcBmwrcDSNSk6tDsMTZoVA9J0aZyhl15kmUmEyJIn0f3AsP8-ynYT22h0CGK-x0fxUdKlJ-GoyHT0jjaYIeRaKBP5rTK5cCKDRMjt2tnCpFdWWwdunXwaDi4-w3BwXv4cQYPtNyK1T8qsYSW0xwZSSkjrDDoYnDWAlTUk99LDr6w6DPqnp0dR9BH6uwUxvWhsBBoq0ma5NWgI_kbAa9zZ9vvBSXJxPhieVKh1KboKKVcNN8DlRsmtQe8BhtG_RqU_BRZ4qMrq7AJPkoNVKvhwlXa7I0nW-Wa_IkSgtxR-C3Nn00Ki64HwsJx3cq-sQ_iheaKGWhLV9qtVCd2FSA8aKwjeRXtLmRnLDaaF5uHF6B6VrBOYGV_9bFPvrdsyb26tfjAzYcQ6bDJQ7-ezN6m3Nm1tIFCnnYbm6LzyhEa2TkAqSCTC476dD3xMBOGDmYx7O7nJuM1coC80MZNt6rUKL-JO4QVqJRKlFb0c9HGCIu3fIBE307AzFL656-j9Sjw7-IZiy5kZklPSczcjNp34RvVqxdmoI3it7VNrxMs58Od3niFnfIO4SDJFQGxOFEIB4qEF6Baf-iEO-BjqfoHcah0FMJAm4zK_dh4yJBFM3OE8zoCPvFdrU-mHUAlNy9SJ8rkguanBaVV8EVf7CuaDKyexw-qav3OuhMCPExV-B85GJbgoDCl-qrLKo3I_x8c7uD6q4RF6Zby2zdMIjGvuQgPfpEw89x1zXjqW3lrClqWGA0A2B7sKVwNgUjiR8GNUuleehQhNCoEXVezEEtksJPBZBoiFSRP7jCngM8qClDX7jEv-x2_wf-PtljA=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
   </div>
 </div>
 
@@ -1402,21 +2408,9 @@ Time: [300-400ms] → Task A (continues)
 
 <h3 id="1-producer-consumer-pattern">1. Producer-Consumer Pattern</h3>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-7305edbe" class="mermaid">
-    
-graph LR
-    A[Producer] --&gt; D[Queue]
-    B[Producer] --&gt; D
-    D --&gt; E[Consumer]
-    D --&gt; F[Consumer]
-    
-    style D fill:#ffeb3b
-    style A fill:#4caf50
-    style B fill:#4caf50
-    style E fill:#2196f3
-    style F fill:#2196f3
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-04bf6906" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp1kktrwzAQhO_6Fdv00kADkUJKkkMJNT2W2tBjLrIsP4i160oyhZb-98oPEjckPtiSZ-bbsdHeeWl9a2p250ttNDS1rJC5Y4WNtNJAKtWxsNRiFlFNFmyRPgi-fQTBN_1tDhO3K2VGXxUWkMva6YnSIxRZ1Bb4eiLkhF6d0eIpUEXHX63mbOJTZBpCjR5-GITr5aLYPV-m2w0Xy0Elm2n7T5m8_ygrdUTtHAj2Ox3y2epW3xqQr7d6mV4bMCi3B5y7z2JLWau6nzAD6SDmV0UxiIINhWZvASULDUm37bVkmosIXWtO0IhfFQdoJBiLOSwWz4ERi3GR9M8QHBfBhOQ1eGqAckhgB1GgWVmDGbv01QZXSt6T6YyBvINXLCUqnUEzfs8BT33cZSLqEu-Nr0z1HSJqbHvAEFZhVDhMbK8xC2f0D3kG3KE=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
   </div>
 </div>
 
@@ -1739,33 +2733,9 @@ Behavior                   Behavior
 
 <h3 id="4-advanced-scheduling-architecture">4. <strong>Advanced Scheduling Architecture</strong></h3>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-deb7ec8e" class="mermaid">
-    
-graph TB
-    subgraph "System Architecture"
-        LB[Load Balancer]
-        S1[Scheduler 1]
-        S2[Scheduler 2]
-        MQ[Message Queue]
-        W1[Worker Pool 1]
-        W2[Worker Pool 2]
-        DB[(Database)]
-    end
-    
-    LB --&gt; S1
-    LB --&gt; S2
-    S1 --&gt; MQ
-    S2 --&gt; MQ
-    MQ --&gt; W1
-    MQ --&gt; W2
-    W1 --&gt; DB
-    W2 --&gt; DB
-    
-    style LB fill:#ff9800
-    style MQ fill:#f44336
-    style DB fill:#4caf50
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-6c3b12d2" class="kroki-diagram">
+    <img src="https://kroki.io/plantuml/svg/eNp1k01vnDAQhu_-FdPtIY3USMFRN0kPVbq7ve2qXRGJSy4GBrDWzCDbNNpW_e81ELJuleWAXvHMvPNh_OC8sr5vjXjnG2wROqM0CXfQ1CmrWshVcagt91Su2bAFW-cfZHL_EWRyN74uIYp2jSr5WVMNlTIOIzJaFGwJLSSfIlAx-eJkLZfBVQ7-NzeXUZjRhP7YIbD1DQtxAd-oUVRgCc4fA62j4ILbjgnJw28B4Vn9N8T75fIWUcnribIt0f5Dou-PjS4OhM6BFH9EVKRUXuXK4bkayXV-f5e8VWMi52tcQHp0Hlv4aotGeyx8bxHW81BOnOZbbFmVobYZVmEXoBxsVzFPiwbL3gxbH2mawNtYTljGdBdaUjXCvsceR77bxzxjewipP5jNi32WnOOTfybF694Wmxc1ks1qGHzNRGFezeTgWfsGvFXkwsIHv_mgtyu4uvoSRnlVUoS5BhX6S-WsdvtRhZ5mJUU2xYVqmZyVIPYIVteNB67CAuHz6e_6qZ3OtdH--ESPUTOni-GmfIPVmL4Z0r93Xrf6V8jv0FZs28HsidIinFRuEFR0suIBqQxX8C_E-iZO" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
   </div>
 </div>
 
@@ -1966,13 +2936,4 @@ graph TB
 
 <hr />
 
-<p><em>Have questions about schedulers or want to share your own experiences? Feel free to reach out on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://www.linkedin.com/in/samadeep">LinkedIn</a>!</em></p>
-
-<h2 id="further-reading">Further Reading</h2>
-
-<ul>
-  <li><a href="https://example.com">Distributed Systems Concepts</a></li>
-  <li><a href="https://example.com">Concurrency in Python</a></li>
-  <li><a href="https://example.com">Microservices Architecture Patterns</a></li>
-  <li><a href="https://example.com">System Design Interview Questions</a></li>
-</ul>]]></content><author><name>Samadeep Sengupta</name></author><category term="System Design" /><category term="Backend Architecture" /><category term="schedulers" /><category term="workers" /><category term="async" /><category term="distributed-systems" /><category term="architecture" /><category term="performance" /><category term="scalability" /><summary type="html"><![CDATA[Explore the world of schedulers and worker schedulers in modern distributed systems. Learn about different scheduling algorithms, implementation patterns, and best practices for building scalable asynchronous task processing systems.]]></summary></entry></feed>
+<p><em>Have questions about schedulers or want to share your own experiences? Feel free to reach out on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://www.linkedin.com/in/samadeep">LinkedIn</a>!</em></p>]]></content><author><name>Samadeep Sengupta</name></author><category term="System Design" /><category term="Backend Architecture" /><category term="schedulers" /><category term="workers" /><category term="async" /><category term="distributed-systems" /><category term="architecture" /><category term="performance" /><category term="scalability" /><summary type="html"><![CDATA[Explore the world of schedulers and worker schedulers in modern distributed systems. Learn about different scheduling algorithms, implementation patterns, and best practices for building scalable asynchronous task processing systems.]]></summary></entry></feed>

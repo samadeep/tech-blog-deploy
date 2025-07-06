@@ -273,32 +273,115 @@
 
 
   <body>
-    <!-- The Side Bar -->
-
+    <!-- Responsive Sidebar Component -->
 <style>
-  .sidebar-search-input{
-    padding-left: 1.5rem;
+  :root {
+    /* tweak one value to resize */
+    --sidebar-desktop-width: 20%;
+    --sidebar-tablet-width: 260px;
   }
-  .sidebar-search{
-    padding-left: 1.5rem;
+
+  /* ---- Base layout ---- */
+  #sidebar {
+    width: var(--sidebar-desktop-width);
+    max-width: 320px;
+    min-width: 220px;
+    /* occupy full height if parent is flex */
+    flex: 0 0 auto;
   }
+
+  #sidebar .sidebar-search-input,
+  #sidebar .sidebar-search {
+    width: 100%;
+  }
+
+  /* spacing utilities we used inline before */
+  #sidebar .profile-wrapper,
+  #sidebar .sidebar-search {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* ---- Tablet: collapsible narrow sidebar ---- */
+  @media (max-width: 992px) {
+    #sidebar {
+      width: var(--sidebar-tablet-width);
+    }
+  }
+
+  /* ---- Mobile: transform into top-bar ---- */
+  @media (max-width: 576px) {
+    /* move sidebar to top (order) and stretch full width */
+    #sidebar {
+      order: -1; /* flex hack – render before main */
+      width: 100%;
+      max-width: 100%;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 .75rem;
+    }
+
+    /* stack avatar + titles inline */
+    #sidebar .profile-wrapper {
+      display: flex;
+      align-items: center;
+      padding: .75rem 0;
+    }
+    #sidebar .profile-wrapper h1 {
+      font-size: 1rem;
+      margin: 0 0 0 .5rem;
+    }
+    #sidebar .site-subtitle {
+      display: none; /* hide to save space */
+    }
+
+    /* make nav horizontal and align items left */
+    #sidebar nav {
+      flex: 1 1 auto;
+      padding-left: .75rem;
+    }
+    #sidebar nav .nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: .5rem;
+      justify-content: flex-start; /* align list items to the left */
+    }
+    #sidebar nav .nav-link {
+      padding: .25rem .5rem;
+      font-size: .875rem;
+    }
+
+    /* search bar fills full width under profile on narrow screens */
+    #sidebar .sidebar-search {
+      width: 100%;
+      padding: 0;
+      margin-bottom: .5rem;
+    }
+
+  }
+
+  li.nav-item{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 !important;
+    }
 </style>
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-center">
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.svg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <h1 class="site-title">
+    <h1 class="site-title m-0">
       <a href="/">Samadeep's Tech Blog</a>
     </h1>
-    <p class="site-subtitle fst-italic mb-0">Engineering Excellence • System Design • DevOps Mastery</p>
+    <p class="site-subtitle fst-italic mb-0">Explorations • Algorithms • System Design • DevOps</p>
   </header>
   <!-- .profile-wrapper -->
 
   <!-- Search Bar in Sidebar -->
-  <div class="sidebar-search w-100 mb-3">
-    <search class="d-flex align-items-center">
-      <i class="fas fa-search fa-fw"></i>
+  <div class="sidebar-search mb-3 w-100">
+    <search class="d-flex align-items-center w-100">
+      <i class="fas fa-search fa-fw me-2"></i>
       <input
         class="form-control sidebar-search-input"
         id="search-input"
@@ -311,7 +394,7 @@
   </div>
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
+    <ul class="nav flex-column w-100 px-3">
       <!-- home -->
       <li class="nav-item">
         <a href="/" class="nav-link">
@@ -319,7 +402,7 @@
           <span>HOME</span>
         </a>
       </li>
-      <!-- the real tabs -->
+      <!-- dynamic tabs -->
       
         <li class="nav-item">
           <a href="/categories/" class="nav-link">
@@ -328,7 +411,6 @@
             <span>CATEGORIES</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/tags/" class="nav-link">
@@ -337,7 +419,6 @@
             <span>TAGS</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/archives/" class="nav-link">
@@ -346,7 +427,6 @@
             <span>ARCHIVES</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
         <li class="nav-item">
           <a href="/about/" class="nav-link">
@@ -355,100 +435,86 @@
             <span>ABOUT</span>
           </a>
         </li>
-        <!-- .nav-item -->
       
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100 px-3 py-2">
     
-      <button type="button" class="mode-toggle btn" aria-label="Switch Mode">
+      <button type="button" class="mode-toggle btn btn-sm" aria-label="Switch Mode">
         <i class="fas fa-adjust"></i>
       </button>
-
       
-        <span class="icon-border"></span>
+        <span class="icon-border mx-2"></span>
       
     
 
     
       
-
       
         <a
           href="https://github.com/samadeep"
           aria-label="github"
           
-
           
             target="_blank"
             
           
-
           
-
           
             rel="noopener noreferrer"
           
+          class="text-decoration-none mx-1"
         >
           <i class="fab fa-github"></i>
         </a>
       
     
       
-
       
         <a
           href="https://twitter.com/samadeepviews"
           aria-label="twitter"
           
-
           
             target="_blank"
             
           
-
           
-
           
             rel="noopener noreferrer"
           
+          class="text-decoration-none mx-1"
         >
           <i class="fa-brands fa-x-twitter"></i>
         </a>
       
     
       
-
       
         <a
           href="javascript:location.href = 'mailto:' + ['samadeepsengupta','gmail.com'].join('@')"
           aria-label="email"
           
-
           
-
           
-
           
+          class="text-decoration-none mx-1"
         >
           <i class="fas fa-envelope"></i>
         </a>
       
     
       
-
       
         <a
           href="/feed.xml"
           aria-label="rss"
           
-
           
-
           
-
           
+          class="text-decoration-none mx-1"
         >
           <i class="fas fa-rss"></i>
         </a>
@@ -574,6 +640,243 @@
     
     
 
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
     
       
 
@@ -1186,12 +1489,12 @@
 <script src="https://cdn.jsdelivr.net/npm/plantuml-encoder@1.4.0/dist/plantuml-encoder.min.js"></script>
 
 <!-- Custom Diagram Styles -->
-<link rel="stylesheet" href="/assets/css/diagrams.css?v=1751818198">
+<link rel="stylesheet" href="/assets/css/diagrams.css?v=1751823568">
 
 <!-- Mermaid will be initialized in diagrams.js -->
 
 <!-- Custom Diagram JavaScript -->
-<script src="/assets/js/diagrams.js?v=1751818198"></script>
+<script src="/assets/js/diagrams.js?v=1751823568"></script>
 
 <!-- Math Support -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -1287,9 +1590,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1653 words"
+  title="1417 words"
 >
-  <em>9 min</em> read</span>
+  <em>7 min</em> read</span>
 
       </div>
       
@@ -1562,38 +1865,9 @@
 
 <p>The blog now supports beautiful Mermaid diagrams with interactive features:</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-b64356d4" class="mermaid">
-    
-graph TD
-    A[Blog Post] --&gt; B[Reading Progress]
-    A --&gt; C[Table of Contents]
-    A --&gt; D[Interactive Features]
-    
-    B --&gt; E[Progress Bar]
-    B --&gt; F[Reading Time]
-    
-    C --&gt; G[Auto-generated TOC]
-    C --&gt; H[Scroll Spy]
-    C --&gt; I[Click Navigation]
-    
-    D --&gt; J[Copy Code Buttons]
-    D --&gt; K[Image Lightbox]
-    D --&gt; L[Back to Top]
-    
-    style A fill:#667eea,stroke:#4f46e5,color:#fff
-    style B fill:#10b981,stroke:#059669,color:#fff
-    style C fill:#f59e0b,stroke:#d97706,color:#fff
-    style D fill:#ef4444,stroke:#dc2626,color:#fff
-    style E fill:#8b5cf6,stroke:#7c3aed,color:#fff
-    style F fill:#8b5cf6,stroke:#7c3aed,color:#fff
-    style G fill:#06b6d4,stroke:#0891b2,color:#fff
-    style H fill:#06b6d4,stroke:#0891b2,color:#fff
-    style I fill:#06b6d4,stroke:#0891b2,color:#fff
-    style J fill:#f97316,stroke:#ea580c,color:#fff
-    style K fill:#f97316,stroke:#ea580c,color:#fff
-    style L fill:#f97316,stroke:#ea580c,color:#fff
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-2b9224ce" class="kroki-diagram">
+    <a href="https://kroki.io/plantuml/svg/eNp1VE1vm0AQvfMrpu6lkWopJqqb9FCloFayFKUooJ58WWAMKy87aHdJalX9751dcEJch4NZeeZ98J7xrXXCuKFT0TvXYofQKyF1ZPdS98KIDkpR7RtDg65TUmTANOWHeHXzEeLVdfi4gNm2bUVNT1I3sBPK4mwSKCoyGg2sPs0GO9KueqGO18wae_6rq4totldR15NG7eBPBHwlJ8ber9efEUV8OU7J1GheTWbfF62s9hqthTj6OxfpmVQ0-JbE6rK8uV6dkxgnb0u8uF8kihrIyLoFCAtJFkVH1cUDitqHlxlqDGMXk5EZ-jhicyYQZMnpypGlkB2GlYfCW3hWKUSpEGgHKUfPiHMy3wZHywa5LeGwhuJnGpj4frqZV4aUgrw_hI08P11IFScB9-JRNsJJ0mEtvX9lacNGjKicfET4gcIN_IhnXKXUH9h1jZAMzpG2I1f6XwSbztPeyaZ1Jf0OW5u70yVfLziCgvqxiiLklGSwXH71uU4n_9DT0UtFmhyC8dw-RJ58ge-6FbrioEpfbs_lbvWTdC04I7Tl35YXtO6guJcRr3AX4FnC8F_SDkJBP3W71Qyr9r5De7AOuxHiqPcItsOQvOP3FvRzqpOeHduw_WHElMQ5daHs1CvNg644yK0WuoYOaylgNwUf3aKu-S_hH1jYVYo=" class="popup img-link  shimmer"><img src="https://kroki.io/plantuml/svg/eNp1VE1vm0AQvfMrpu6lkWopJqqb9FCloFayFKUooJ58WWAMKy87aHdJalX9751dcEJch4NZeeZ98J7xrXXCuKFT0TvXYofQKyF1ZPdS98KIDkpR7RtDg65TUmTANOWHeHXzEeLVdfi4gNm2bUVNT1I3sBPK4mwSKCoyGg2sPs0GO9KueqGO18wae_6rq4totldR15NG7eBPBHwlJ8ber9efEUV8OU7J1GheTWbfF62s9hqthTj6OxfpmVQ0-JbE6rK8uV6dkxgnb0u8uF8kihrIyLoFCAtJFkVH1cUDitqHlxlqDGMXk5EZ-jhicyYQZMnpypGlkB2GlYfCW3hWKUSpEGgHKUfPiHMy3wZHywa5LeGwhuJnGpj4frqZV4aUgrw_hI08P11IFScB9-JRNsJJ0mEtvX9lacNGjKicfET4gcIN_IhnXKXUH9h1jZAMzpG2I1f6XwSbztPeyaZ1Jf0OW5u70yVfLziCgvqxiiLklGSwXH71uU4n_9DT0UtFmhyC8dw-RJ58ge-6FbrioEpfbs_lbvWTdC04I7Tl35YXtO6guJcRr3AX4FnC8F_SDkJBP3W71Qyr9r5De7AOuxHiqPcItsOQvOP3FvRzqpOeHduw_WHElMQ5daHs1CvNg644yK0WuoYOaylgNwUf3aKu-S_hH1jYVYo=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" loading="lazy"></a>
   </div>
 </div>
 
@@ -1601,24 +1875,9 @@ graph TD
 
 <p>Here’s how users interact with the enhanced blog:</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-ecbd263d" class="mermaid">
-    
-journey
-    title Blog Reading Experience
-    section Arrival
-      Open Blog Post     : 5: Reader
-      See Progress Bar   : 4: Reader
-      Notice TOC         : 3: Reader
-    section Reading
-      Use TOC Navigation : 5: Reader
-      Copy Code Snippets : 4: Reader
-      View Images        : 3: Reader
-    section Interaction
-      Share Post         : 4: Reader
-      Read Related Posts : 3: Reader
-      Navigate to Next   : 5: Reader
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-1f7e0660" class="kroki-diagram">
+    <a href="https://kroki.io/plantuml/svg/eNqFU01v2zAMvftXcN2lAVagdrH04zB0CXboJQ2WbqdeGJuVtdiUQDHJgmH_fXSydl6xeD4Qgt7je0-UfJsURddtk73RmlqC2KDnLK08RxRsYYnlyklYczUNTRAQtzwt8ut3UORX-zKCHjvVWIWtZwdP2CTqIXuJMgiTQP6-BzwF1vKPdDE21aLTv7gYZT2eVfWlj8gKPzKwb_Iq2tvx-JIIi_MDGqQi-Qvp7T_UvlwxpQRF9rNvg6X6jdfdMY_8fHl9lf_L44Ac9zBlo30mNCjLOtEIJx9F_AYbmNeY6GTffGDA2Yfn1Q3cR2KYNMHBPCSF09Ex4oII5hKcdK4TlAHqLNg4CR7upx2JuHrJ1FG6KxzO9CUdmme48Q7VBx4wm4a4s1IRLNjHSJoGyF89beGuRUfpdbQ7VpLuisxtON6iRqH_jatbWGlQqdpzh2L9PiiBBpjRd33JxsE2xbtajfWJa-TS5NbJur6Ftb343SNvvdaggpzsmZE94aS7xob8yMgV-DZK2FiT2CDZpezWhO2n_AVDESQo" class="popup img-link  shimmer"><img src="https://kroki.io/plantuml/svg/eNqFU01v2zAMvftXcN2lAVagdrH04zB0CXboJQ2WbqdeGJuVtdiUQDHJgmH_fXSydl6xeD4Qgt7je0-UfJsURddtk73RmlqC2KDnLK08RxRsYYnlyklYczUNTRAQtzwt8ut3UORX-zKCHjvVWIWtZwdP2CTqIXuJMgiTQP6-BzwF1vKPdDE21aLTv7gYZT2eVfWlj8gKPzKwb_Iq2tvx-JIIi_MDGqQi-Qvp7T_UvlwxpQRF9rNvg6X6jdfdMY_8fHl9lf_L44Ac9zBlo30mNCjLOtEIJx9F_AYbmNeY6GTffGDA2Yfn1Q3cR2KYNMHBPCSF09Ex4oII5hKcdK4TlAHqLNg4CR7upx2JuHrJ1FG6KxzO9CUdmme48Q7VBx4wm4a4s1IRLNjHSJoGyF89beGuRUfpdbQ7VpLuisxtON6iRqH_jatbWGlQqdpzh2L9PiiBBpjRd33JxsE2xbtajfWJa-TS5NbJur6Ftb343SNvvdaggpzsmZE94aS7xob8yMgV-DZK2FiT2CDZpezWhO2n_AVDESQo" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" loading="lazy"></a>
   </div>
 </div>
 
@@ -1626,41 +1885,9 @@ journey
 
 <p>The enhancement system follows this architecture:</p>
 
-<div class="mermaid-diagram">
-  <div id="mermaid-a4b0a1cf" class="mermaid">
-    
-flowchart LR
-    subgraph "Frontend"
-        A[HTML Layout] --&gt; B[CSS Styles]
-        B --&gt; C[JavaScript Logic]
-    end
-    
-    subgraph "Features"
-        D[TOC Generator] --&gt; E[Scroll Spy]
-        F[Progress Tracker] --&gt; G[Reading Time]
-        H[Code Enhancer] --&gt; I[Copy Buttons]
-        J[Image Handler] --&gt; K[Lightbox]
-    end
-    
-    subgraph "User Actions"
-        L[Click TOC] --&gt; M[Smooth Scroll]
-        N[Copy Code] --&gt; O[Clipboard API]
-        P[View Image] --&gt; Q[Modal Display]
-    end
-    
-    C --&gt; D
-    C --&gt; F
-    C --&gt; H
-    C --&gt; J
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-    style F fill:#fce4ec
-    style H fill:#e0f2f1
-    style J fill:#f1f8e9
-
+<div class="diagram-container">
+  <div id="kroki-plantuml-02244800" class="kroki-diagram">
+    <a href="https://kroki.io/plantuml/svg/eNp1VE1vm0AQvfMrpu6lkRopJmqa9FAlJm6NhRXLEKsHXxZYAzLsoGWpa1X9753dJTLGDgc07Lx98_WGx0YxqdqqdD6onFcc6pIVwml2haiZZBXELNllEluReliiBJnFn9zxw2dwx_fmdQU9dJOzFPeFyGDLyob3PIYiQSm4hPGXnmOLQiVHaveOWF3Nf3t75fRwNSXCMg5_HaBnMkjr493dV86Ze2O9KFMuTzy98ygvkp3gTQOu868fIsGqRsGFei_I-CZ-uB9fCmI97wd5y370Q1K9XKSjLsYx5mgWLQII2AFbNQLWgP4eYrwwhFAdSt4YCH0OEXP2m4WJLGoFAWZFYnDz8DQJzlQrNcdZEtGLBz85TYkplOYunQxBxI9lCWF9MIjzJJYSM6mLjyTF5JZoGQ1hK85SLZaoqLiBrM4gHqYcpiJnIulovOk5pj7ApFUKRdeWyRDiV7rwGRNp2dH4syEmKLJcxfjHuIPJScdeG9LtU6IKE-Ksa15J09adsuHPqggrRJWD7Zvtmbd6CYKLleiSLY93IU4dI5MpPC19iwn85RC1LvgeTMUGsvaHgAWmrITnoqFttyNcPOtyjQKvr78bXWmpaZu048ytqaXQmTTMzqJ5dBa11NH60TYRLCNj0Uy9qUVOHH9mLOqu41l31wjPXjPlrH1jU06OQMVBYQ24pUTgG3hUgKTkjzLfiIRWSjeWRrQvVL7RCNHQTutiG9oW0phlipFEUmmytxUgyk5dKWzt2UZUmLa0YvRvkhsRc6WI-fWX80h7S7_K_0gAm6E=" class="popup img-link  shimmer"><img src="https://kroki.io/plantuml/svg/eNp1VE1vm0AQvfMrpu6lkRopJmqa9FAlJm6NhRXLEKsHXxZYAzLsoGWpa1X9753dJTLGDgc07Lx98_WGx0YxqdqqdD6onFcc6pIVwml2haiZZBXELNllEluReliiBJnFn9zxw2dwx_fmdQU9dJOzFPeFyGDLyob3PIYiQSm4hPGXnmOLQiVHaveOWF3Nf3t75fRwNSXCMg5_HaBnMkjr493dV86Ze2O9KFMuTzy98ygvkp3gTQOu868fIsGqRsGFei_I-CZ-uB9fCmI97wd5y370Q1K9XKSjLsYx5mgWLQII2AFbNQLWgP4eYrwwhFAdSt4YCH0OEXP2m4WJLGoFAWZFYnDz8DQJzlQrNcdZEtGLBz85TYkplOYunQxBxI9lCWF9MIjzJJYSM6mLjyTF5JZoGQ1hK85SLZaoqLiBrM4gHqYcpiJnIulovOk5pj7ApFUKRdeWyRDiV7rwGRNp2dH4syEmKLJcxfjHuIPJScdeG9LtU6IKE-Ksa15J09adsuHPqggrRJWD7Zvtmbd6CYKLleiSLY93IU4dI5MpPC19iwn85RC1LvgeTMUGsvaHgAWmrITnoqFttyNcPOtyjQKvr78bXWmpaZu048ytqaXQmTTMzqJ5dBa11NH60TYRLCNj0Uy9qUVOHH9mLOqu41l31wjPXjPlrH1jU06OQMVBYQ24pUTgG3hUgKTkjzLfiIRWSjeWRrQvVL7RCNHQTutiG9oW0phlipFEUmmytxUgyk5dKWzt2UZUmLa0YvRvkhsRc6WI-fWX80h7S7_K_0gAm6E=" alt="Plantuml Diagram" loading="lazy" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" loading="lazy"></a>
   </div>
 </div>
 
@@ -1929,16 +2156,6 @@ npm <span class="nb">install
     
 
     <div class="post-tail-bottom d-flex justify-content-between align-items-center mt-5 pb-2">
-      <div class="license-wrapper">
-        
-          
-          This post is licensed under 
-            <a href="https://creativecommons.org/licenses/by/4.0/">
-              CC BY 4.0
-            </a>
-           by the author.
-        
-      </div>
 
       <!-- Post sharing snippet -->
 
@@ -2143,7 +2360,14 @@ npm <span class="nb">install
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/mermaid-test/">Mermaid Test</a>
+          <a href="/posts/complete-blog-guide-features-diagrams-and-best-practices/">Complete Blog Guide: Features, Diagrams, and Best Practices</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/mermaid-test/">Enhanced Mermaid Diagrams: Transparent Backgrounds & Vibrant Colors</a>
         </li>
       
         
@@ -2193,6 +2417,209 @@ npm <span class="nb">install
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -2347,201 +2774,6 @@ npm <span class="nb">install
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2600,6 +2832,15 @@ npm <span class="nb">install
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/diagrams/">diagrams</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mermaid/">mermaid</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/algorithms/">algorithms</a>
       
         
@@ -2612,22 +2853,13 @@ npm <span class="nb">install
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/colors/">colors</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/competitive-programming/">competitive-programming</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css/">css</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-structures/">data-structures</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/distributed-systems/">distributed-systems</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dynamic-programming/">dynamic-programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
       
     </div>
   </section>
@@ -2682,7 +2914,30 @@ npm <span class="nb">install
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
@@ -2692,6 +2947,91 @@ npm <span class="nb">install
 
 
 
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/complete-blog-guide-features-diagrams-and-best-practices/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1751820309"
+  data-df="ll"
+  
+>
+  Jul  6, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Complete Blog Guide: Features, Diagrams, and Best Practices</h4>
+              <div class="text-muted">
+                <p>
+                  
+
+
+
+
+
+                  🚀 Complete Blog Guide: Features, Diagrams, and Best Practices
+
+Welcome to the ultimate guide for this enhanced blog platform! This comprehensive guide covers everything you need to know about using...
+                </p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/mermaid-test/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1751805684"
+  data-df="ll"
+  
+>
+  Jul  6, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Enhanced Mermaid Diagrams: Transparent Backgrounds & Vibrant Colors</h4>
+              <div class="text-muted">
+                <p>
+                  
+
+
+
+
+
+                  🎨 Enhanced Mermaid Diagrams: Transparent Backgrounds &amp;amp; Vibrant Colors
+
+Welcome to the new and improved Mermaid diagram experience! All diagrams now feature transparent backgrounds and enhanced ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
 
 
             
@@ -2718,7 +3058,7 @@ npm <span class="nb">install
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Mermaid Test</p>
+      <p>Enhanced Mermaid Diagrams: Transparent Backgrounds & Vibrant Colors</p>
     </a>
   
 </nav>
@@ -2783,6 +3123,209 @@ npm <span class="nb">install
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -2937,201 +3480,6 @@ npm <span class="nb">install
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3190,6 +3538,15 @@ npm <span class="nb">install
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/diagrams/">diagrams</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mermaid/">mermaid</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/algorithms/">algorithms</a>
       
         
@@ -3202,22 +3559,13 @@ npm <span class="nb">install
         <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/colors/">colors</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/competitive-programming/">competitive-programming</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/css/">css</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-structures/">data-structures</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/distributed-systems/">distributed-systems</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/dynamic-programming/">dynamic-programming</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/features/">features</a>
       
     </div>
   </section>
