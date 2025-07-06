@@ -1,0 +1,1978 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://samadeep.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://samadeep.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-06T11:45:55-04:00</updated><id>https://samadeep.github.io/feed.xml</id><title type="html">Samadeep’s Tech Blog</title><subtitle>A comprehensive technical blog covering system design, software engineering, DevOps practices,  and cutting-edge technology insights. Featuring interactive diagrams and real-world solutions.</subtitle><entry><title type="html">Mermaid Test</title><link href="https://samadeep.github.io/posts/mermaid-test/" rel="alternate" type="text/html" title="Mermaid Test" /><published>2025-07-06T08:41:24-04:00</published><updated>2025-07-06T08:41:24-04:00</updated><id>https://samadeep.github.io/posts/mermaid-test</id><content type="html" xml:base="https://samadeep.github.io/posts/mermaid-test/"><![CDATA[<h1 id="mermaid-test">Mermaid Test</h1>
+
+<p>This is a simple test post to verify Mermaid diagrams are working correctly.</p>
+
+<h2 id="simple-flowchart">Simple Flowchart</h2>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-eae5a609" class="mermaid">
+    
+graph TD
+    A[Start] --&gt; B{Is it working?}
+    B --&gt;|Yes| C[Great!]
+    B --&gt;|No| D[Fix it]
+    D --&gt; B
+    C --&gt; E[End]
+
+  </div>
+</div>
+
+<h2 id="complex-decision-tree-similar-to-fixed-diagram">Complex Decision Tree (Similar to Fixed Diagram)</h2>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-2b23ba39" class="mermaid">
+    
+graph TB
+    A["Item i, Weight w, Value v"] --&gt; B["Include Item i"]
+    A --&gt; C["Exclude Item i"]
+    B --&gt; D["Value = v + DP[W-w]"]
+    C --&gt; E["Value = DP[W]"]
+    D --&gt; F["Max(Include, Exclude)"]
+    E --&gt; F
+    
+    style A fill:#e1f5fe
+    style B fill:#c8e6c9
+    style C fill:#ffcdd2
+    style F fill:#fff3e0
+
+  </div>
+</div>
+
+<h2 id="state-transition-diagram">State Transition Diagram</h2>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-5e286d0f" class="mermaid">
+    
+graph TB
+    A["Position i-1"] --&gt; B["A[i-1] &lt; A[i] &amp;&amp; B[i-1] &lt; B[i]"]
+    A --&gt; C["A[i-1] &lt; B[i] &amp;&amp; B[i-1] &lt; A[i]"]
+    
+    B --&gt; D["Case 1: Natural Order"]
+    C --&gt; E["Case 2: Cross Order"]
+    
+    D --&gt; F1["not_swap[i] = not_swap[i-1]"]
+    D --&gt; F2["swap[i] = swap[i-1] + 1"]
+    
+    E --&gt; G1["not_swap[i] = min(not_swap[i], swap[i-1])"]
+    E --&gt; G2["swap[i] = min(swap[i], not_swap[i-1] + 1)"]
+    
+    style B fill:#c8e6c9
+    style C fill:#ffcdd2
+    style D fill:#e1f5fe
+    style E fill:#fff3e0
+    style F1 fill:#f0f8ff
+    style F2 fill:#f0f8ff
+    style G1 fill:#fff8dc
+    style G2 fill:#fff8dc
+
+  </div>
+</div>
+
+<h2 id="sequence-diagram">Sequence Diagram</h2>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-171db4e5" class="mermaid">
+    
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    
+    User-&gt;&gt;Browser: Visit blog
+    Browser-&gt;&gt;Server: Request page
+    Server--&gt;&gt;Browser: Return HTML
+    Browser-&gt;&gt;Browser: Load Mermaid
+    Browser-&gt;&gt;User: Display diagram
+
+  </div>
+</div>
+
+<h2 id="simple-pie-chart">Simple Pie Chart</h2>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-78b1d8a1" class="mermaid">
+    
+pie title Blog Features
+    "TOC" : 25
+    "Progress Bar" : 20
+    "Copy Buttons" : 15
+    "Image Lightbox" : 15
+    "Navigation" : 25
+
+  </div>
+</div>
+
+<p>If you can see all the diagrams above, Mermaid is working correctly!</p>
+
+<hr />
+
+<p><em>Have questions or feedback? Feel free to reach out on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://www.linkedin.com/in/samadeep">LinkedIn</a>!</em></p>]]></content><author><name>Samadeep Sengupta</name></author><category term="Test" /><category term="mermaid" /><category term="test" /><summary type="html"><![CDATA[Testing Mermaid diagram rendering functionality]]></summary></entry><entry><title type="html">Blog Enhancement Showcase: New Features Demo</title><link href="https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo/" rel="alternate" type="text/html" title="Blog Enhancement Showcase: New Features Demo" /><published>2025-07-06T08:36:03-04:00</published><updated>2025-07-06T08:36:03-04:00</updated><id>https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo</id><content type="html" xml:base="https://samadeep.github.io/posts/blog-enhancement-showcase-new-features-demo/"><![CDATA[<h1 id="blog-enhancement-showcase-new-features-demo">Blog Enhancement Showcase: New Features Demo</h1>
+
+<p>Welcome to the enhanced version of this blog! This post serves as a comprehensive demonstration of all the exciting new features that have been added to improve your reading experience. From a dynamic table of contents to interactive elements, let’s explore what’s new! 🚀</p>
+
+<h2 id="-whats-new">✨ What’s New</h2>
+
+<p>This blog has received a major upgrade with numerous user experience improvements. You’ll notice several new features working right now as you read this post!</p>
+
+<h2 id="-table-of-contents-features">📚 Table of Contents Features</h2>
+
+<h3 id="right-side-navigation">Right-Side Navigation</h3>
+
+<p>Look to your right (on desktop) or scroll down (on mobile) to see the automatically generated table of contents. This TOC offers several amazing features:</p>
+
+<ul>
+  <li><strong>🎯 Auto-generated</strong> from your headings</li>
+  <li><strong>📍 Scroll spy</strong> - highlights current section</li>
+  <li><strong>🖱️ Click to jump</strong> to any section instantly</li>
+  <li><strong>📱 Responsive</strong> - adapts to different screen sizes</li>
+  <li><strong>🎨 Beautiful styling</strong> with smooth animations</li>
+</ul>
+
+<h3 id="heading-anchor-links">Heading Anchor Links</h3>
+
+<p>Try clicking on any heading in this post! Each heading now has an anchor link that:</p>
+
+<ul>
+  <li><strong>📋 Copies the link</strong> to your clipboard automatically</li>
+  <li><strong>🔗 Shows a link icon</strong> on hover</li>
+  <li><strong>📱 Makes sharing</strong> specific sections easy</li>
+</ul>
+
+<h2 id="-reading-progress-bar">📊 Reading Progress Bar</h2>
+
+<p>Notice the colorful progress bar at the very top of your browser? That’s the reading progress indicator that:</p>
+
+<ul>
+  <li><strong>📈 Shows your progress</strong> through the article</li>
+  <li><strong>🌈 Has a beautiful gradient</strong> design</li>
+  <li><strong>⚡ Updates smoothly</strong> as you scroll</li>
+  <li><strong>🎯 Helps you track</strong> how much is left to read</li>
+</ul>
+
+<h2 id="-enhanced-post-layout">📱 Enhanced Post Layout</h2>
+
+<h3 id="modern-design-elements">Modern Design Elements</h3>
+
+<p>The post layout has been completely redesigned with:</p>
+
+<ul>
+  <li><strong>🎨 Gradient titles</strong> with beautiful colors</li>
+  <li><strong>📅 Enhanced metadata</strong> display with icons</li>
+  <li><strong>🏷️ Better tag and category</strong> styling</li>
+  <li><strong>📐 Improved spacing</strong> and typography</li>
+  <li><strong>💳 Card-based designs</strong> for better visual hierarchy</li>
+</ul>
+
+<h3 id="responsive-grid-layout">Responsive Grid Layout</h3>
+
+<p>The layout automatically adapts to different screen sizes:</p>
+
+<ul>
+  <li><strong>💻 Desktop</strong>: Two-column layout with side TOC</li>
+  <li><strong>📱 Mobile</strong>: Single-column layout with hidden TOC</li>
+  <li><strong>🎯 Perfect spacing</strong> on all devices</li>
+</ul>
+
+<h2 id="-interactive-features">🔧 Interactive Features</h2>
+
+<h3 id="copy-code-buttons">Copy Code Buttons</h3>
+
+<p>Check out this code block - notice the copy button in the top-right corner:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="c1">// Try clicking the copy button above!</span>
+<span class="kd">function</span> <span class="nf">enhancedBlogFeatures</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">toc</span><span class="p">:</span> <span class="dl">"</span><span class="s2">✅ Working</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">readingProgress</span><span class="p">:</span> <span class="dl">"</span><span class="s2">✅ Working</span><span class="dl">"</span><span class="p">,</span> 
+    <span class="na">copyButtons</span><span class="p">:</span> <span class="dl">"</span><span class="s2">✅ Working</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">lightbox</span><span class="p">:</span> <span class="dl">"</span><span class="s2">✅ Working</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">navigation</span><span class="p">:</span> <span class="dl">"</span><span class="s2">✅ Working</span><span class="dl">"</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// This code can be copied with one click!</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Blog enhancements are awesome! 🚀</span><span class="dl">"</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Features of the copy button:</p>
+<ul>
+  <li><strong>📋 One-click copying</strong> of entire code blocks</li>
+  <li><strong>✅ Visual feedback</strong> when copied successfully</li>
+  <li><strong>🎨 Smooth animations</strong> and hover effects</li>
+</ul>
+
+<h3 id="image-lightbox">Image Lightbox</h3>
+
+<p>Click on any image in this post to see the lightbox feature in action:</p>
+
+<p><img src="https://via.placeholder.com/600x300/667eea/ffffff?text=Click+Me+for+Lightbox!" alt="Blog Enhancement Demo" /></p>
+
+<p><em>Click the image above to see the lightbox feature</em></p>
+
+<p>The lightbox provides:</p>
+<ul>
+  <li><strong>🔍 Full-screen viewing</strong> of images</li>
+  <li><strong>⌨️ Keyboard navigation</strong> (ESC to close)</li>
+  <li><strong>🖱️ Click outside to close</strong></li>
+  <li><strong>🎨 Smooth animations</strong></li>
+</ul>
+
+<h3 id="back-to-top-button">Back to Top Button</h3>
+
+<p>Scroll down this page and you’ll see a floating “Back to Top” button appear. It features:</p>
+
+<ul>
+  <li><strong>⬆️ Smooth scroll</strong> to the top</li>
+  <li><strong>👁️ Auto-hide/show</strong> based on scroll position</li>
+  <li><strong>🎨 Beautiful hover effects</strong></li>
+  <li><strong>📱 Mobile-friendly</strong> positioning</li>
+</ul>
+
+<h2 id="-enhanced-navigation">🔗 Enhanced Navigation</h2>
+
+<h3 id="previousnext-post-navigation">Previous/Next Post Navigation</h3>
+
+<p>At the bottom of this post, you’ll find enhanced navigation cards for previous and next posts with:</p>
+
+<ul>
+  <li><strong>📰 Post previews</strong> with titles</li>
+  <li><strong>🎨 Hover animations</strong></li>
+  <li><strong>📱 Responsive design</strong></li>
+  <li><strong>🎯 Clear directional indicators</strong></li>
+</ul>
+
+<h3 id="breadcrumb-navigation">Breadcrumb Navigation</h3>
+
+<p>The post header now includes enhanced metadata:</p>
+
+<ul>
+  <li><strong>📅 Publication date</strong> with icons</li>
+  <li><strong>👤 Author information</strong></li>
+  <li><strong>⏱️ Estimated reading time</strong> (auto-calculated)</li>
+  <li><strong>📂 Categories</strong> with links</li>
+  <li><strong>🏷️ Tags</strong> with enhanced styling</li>
+</ul>
+
+<h2 id="-visual-enhancements">🎨 Visual Enhancements</h2>
+
+<h3 id="enhanced-typography">Enhanced Typography</h3>
+
+<p>The blog now features improved typography:</p>
+
+<ul>
+  <li><strong>📖 Better line height</strong> for readability</li>
+  <li><strong>🎨 Gradient headings</strong> for visual appeal</li>
+  <li><strong>📏 Improved spacing</strong> between elements</li>
+  <li><strong>🎯 Better font weights</strong> and sizes</li>
+</ul>
+
+<h3 id="color-scheme">Color Scheme</h3>
+
+<p>A carefully crafted color scheme provides:</p>
+
+<ul>
+  <li><strong>🌈 Beautiful gradients</strong> throughout</li>
+  <li><strong>🎨 Consistent color palette</strong></li>
+  <li><strong>👁️ High contrast</strong> for accessibility</li>
+  <li><strong>🌙 Dark mode support</strong> (if enabled in theme)</li>
+</ul>
+
+<h3 id="animations-and-transitions">Animations and Transitions</h3>
+
+<p>Smooth animations enhance the user experience:</p>
+
+<ul>
+  <li><strong>🎭 Hover effects</strong> on interactive elements</li>
+  <li><strong>⚡ Smooth scrolling</strong> throughout the site</li>
+  <li><strong>🎨 Fade-in animations</strong> for content</li>
+  <li><strong>🔄 Loading animations</strong> for images</li>
+</ul>
+
+<h2 id="-code-enhancement-features">🔧 Code Enhancement Features</h2>
+
+<h3 id="syntax-highlighting">Syntax Highlighting</h3>
+
+<p>Code blocks now have enhanced styling:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="c1"># Beautiful syntax highlighting
+</span><span class="k">def</span> <span class="nf">blog_enhancements</span><span class="p">():</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sh">"</span><span class="s">toc</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Auto-generated with scroll spy</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">progress</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Reading progress indicator</span><span class="sh">"</span><span class="p">,</span> 
+        <span class="sh">"</span><span class="s">copy</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">One-click code copying</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">lightbox</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Image zoom functionality</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">navigation</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Enhanced post navigation</span><span class="sh">"</span>
+    <span class="p">}</span>
+    
+    <span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">features</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">✅ </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s">: </span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="sh">"</span><span class="s">All features working perfectly! 🚀</span><span class="sh">"</span>
+
+<span class="c1"># Call the function
+</span><span class="n">result</span> <span class="o">=</span> <span class="nf">blog_enhancements</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="mermaid-diagrams">Mermaid Diagrams</h3>
+
+<p>The blog now supports beautiful Mermaid diagrams with interactive features:</p>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-b64356d4" class="mermaid">
+    
+graph TD
+    A[Blog Post] --&gt; B[Reading Progress]
+    A --&gt; C[Table of Contents]
+    A --&gt; D[Interactive Features]
+    
+    B --&gt; E[Progress Bar]
+    B --&gt; F[Reading Time]
+    
+    C --&gt; G[Auto-generated TOC]
+    C --&gt; H[Scroll Spy]
+    C --&gt; I[Click Navigation]
+    
+    D --&gt; J[Copy Code Buttons]
+    D --&gt; K[Image Lightbox]
+    D --&gt; L[Back to Top]
+    
+    style A fill:#667eea,stroke:#4f46e5,color:#fff
+    style B fill:#10b981,stroke:#059669,color:#fff
+    style C fill:#f59e0b,stroke:#d97706,color:#fff
+    style D fill:#ef4444,stroke:#dc2626,color:#fff
+    style E fill:#8b5cf6,stroke:#7c3aed,color:#fff
+    style F fill:#8b5cf6,stroke:#7c3aed,color:#fff
+    style G fill:#06b6d4,stroke:#0891b2,color:#fff
+    style H fill:#06b6d4,stroke:#0891b2,color:#fff
+    style I fill:#06b6d4,stroke:#0891b2,color:#fff
+    style J fill:#f97316,stroke:#ea580c,color:#fff
+    style K fill:#f97316,stroke:#ea580c,color:#fff
+    style L fill:#f97316,stroke:#ea580c,color:#fff
+
+  </div>
+</div>
+
+<h3 id="user-experience-flow">User Experience Flow</h3>
+
+<p>Here’s how users interact with the enhanced blog:</p>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-ecbd263d" class="mermaid">
+    
+journey
+    title Blog Reading Experience
+    section Arrival
+      Open Blog Post     : 5: Reader
+      See Progress Bar   : 4: Reader
+      Notice TOC         : 3: Reader
+    section Reading
+      Use TOC Navigation : 5: Reader
+      Copy Code Snippets : 4: Reader
+      View Images        : 3: Reader
+    section Interaction
+      Share Post         : 4: Reader
+      Read Related Posts : 3: Reader
+      Navigate to Next   : 5: Reader
+
+  </div>
+</div>
+
+<h3 id="technical-architecture">Technical Architecture</h3>
+
+<p>The enhancement system follows this architecture:</p>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-a4b0a1cf" class="mermaid">
+    
+flowchart LR
+    subgraph "Frontend"
+        A[HTML Layout] --&gt; B[CSS Styles]
+        B --&gt; C[JavaScript Logic]
+    end
+    
+    subgraph "Features"
+        D[TOC Generator] --&gt; E[Scroll Spy]
+        F[Progress Tracker] --&gt; G[Reading Time]
+        H[Code Enhancer] --&gt; I[Copy Buttons]
+        J[Image Handler] --&gt; K[Lightbox]
+    end
+    
+    subgraph "User Actions"
+        L[Click TOC] --&gt; M[Smooth Scroll]
+        N[Copy Code] --&gt; O[Clipboard API]
+        P[View Image] --&gt; Q[Modal Display]
+    end
+    
+    C --&gt; D
+    C --&gt; F
+    C --&gt; H
+    C --&gt; J
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style F fill:#fce4ec
+    style H fill:#e0f2f1
+    style J fill:#f1f8e9
+
+  </div>
+</div>
+
+<h3 id="multiple-language-support">Multiple Language Support</h3>
+
+<p>The blog supports syntax highlighting for many languages:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c"># Bash script example</span>
+<span class="nb">echo</span> <span class="s2">"Setting up blog enhancements..."</span>
+npm <span class="nb">install
+</span>bundle <span class="nb">install
+</span>jekyll serve
+<span class="nb">echo</span> <span class="s2">"Blog is ready! 🎉"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="c">/* Enhanced CSS styling */</span>
+<span class="nc">.blog-enhancement</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">135deg</span><span class="p">,</span> <span class="nx">#667eea</span> <span class="m">0%</span><span class="p">,</span> <span class="nx">#764ba2</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">12px</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.1</span><span class="p">);</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="nb">all</span> <span class="m">0.3s</span> <span class="nb">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.blog-enhancement</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="nf">translateY</span><span class="p">(</span><span class="m">-4px</span><span class="p">);</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">8px</span> <span class="m">25px</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.15</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="-mobile-experience">📱 Mobile Experience</h2>
+
+<h3 id="responsive-design">Responsive Design</h3>
+
+<p>The blog is fully responsive with:</p>
+
+<ul>
+  <li><strong>📱 Mobile-first approach</strong></li>
+  <li><strong>🎯 Touch-friendly interactions</strong></li>
+  <li><strong>📐 Optimized layouts</strong> for small screens</li>
+  <li><strong>⚡ Fast loading</strong> on mobile devices</li>
+</ul>
+
+<h3 id="mobile-specific-features">Mobile-Specific Features</h3>
+
+<p>Special considerations for mobile users:</p>
+
+<ul>
+  <li><strong>👆 Touch-optimized</strong> buttons and links</li>
+  <li><strong>📱 Collapsible TOC</strong> that doesn’t clutter the view</li>
+  <li><strong>🎯 Optimized spacing</strong> for thumb navigation</li>
+  <li><strong>⚡ Smooth scrolling</strong> performance</li>
+</ul>
+
+<h2 id="-performance-optimizations">🚀 Performance Optimizations</h2>
+
+<h3 id="loading-performance">Loading Performance</h3>
+
+<p>The enhancements are designed for speed:</p>
+
+<ul>
+  <li><strong>⚡ Lazy loading</strong> for images</li>
+  <li><strong>🎯 Optimized JavaScript</strong> with request animation frame</li>
+  <li><strong>📦 Minimal CSS</strong> with efficient selectors</li>
+  <li><strong>🚀 Fast rendering</strong> with CSS Grid and Flexbox</li>
+</ul>
+
+<h3 id="seo-enhancements">SEO Enhancements</h3>
+
+<p>Better search engine optimization:</p>
+
+<ul>
+  <li><strong>🔍 Structured data</strong> markup</li>
+  <li><strong>📋 Meta descriptions</strong> auto-generation</li>
+  <li><strong>🏷️ Enhanced tags</strong> and categories</li>
+  <li><strong>🔗 Proper heading hierarchy</strong></li>
+</ul>
+
+<h2 id="-accessibility-features">🎯 Accessibility Features</h2>
+
+<h3 id="keyboard-navigation">Keyboard Navigation</h3>
+
+<p>Full keyboard support includes:</p>
+
+<ul>
+  <li><strong>⌨️ Tab navigation</strong> through all interactive elements</li>
+  <li><strong>🎯 Focus indicators</strong> for better visibility</li>
+  <li><strong>⌨️ Keyboard shortcuts</strong> for common actions</li>
+  <li><strong>♿ Screen reader</strong> friendly markup</li>
+</ul>
+
+<h3 id="visual-accessibility">Visual Accessibility</h3>
+
+<p>Designed for all users:</p>
+
+<ul>
+  <li><strong>👁️ High contrast</strong> ratios</li>
+  <li><strong>📏 Scalable fonts</strong> that resize well</li>
+  <li><strong>🎨 Color-blind friendly</strong> palette</li>
+  <li><strong>⚡ Reduced motion</strong> options (respects user preferences)</li>
+</ul>
+
+<h2 id="-technical-implementation">📊 Technical Implementation</h2>
+
+<h3 id="modern-javascript">Modern JavaScript</h3>
+
+<p>The features use modern web technologies:</p>
+
+<ul>
+  <li><strong>🔧 ES6+ JavaScript</strong> with classes and modules</li>
+  <li><strong>⚡ RequestAnimationFrame</strong> for smooth animations</li>
+  <li><strong>🎯 Intersection Observer</strong> for scroll detection</li>
+  <li><strong>📋 Clipboard API</strong> for copy functionality</li>
+</ul>
+
+<h3 id="css-grid-and-flexbox">CSS Grid and Flexbox</h3>
+
+<p>Layout uses modern CSS:</p>
+
+<ul>
+  <li><strong>📐 CSS Grid</strong> for complex layouts</li>
+  <li><strong>🎯 Flexbox</strong> for flexible components</li>
+  <li><strong>📱 CSS Custom Properties</strong> for theming</li>
+  <li><strong>⚡ Modern selectors</strong> for better performance</li>
+</ul>
+
+<h3 id="jekyll-integration">Jekyll Integration</h3>
+
+<p>Seamless integration with Jekyll:</p>
+
+<ul>
+  <li><strong>🔧 Liquid templates</strong> for dynamic content</li>
+  <li><strong>📦 Include files</strong> for modularity</li>
+  <li><strong>🎯 Front matter</strong> integration</li>
+  <li><strong>⚡ Build-time optimization</strong></li>
+</ul>
+
+<h2 id="-related-posts-feature">🎉 Related Posts Feature</h2>
+
+<p>At the bottom of this post, you’ll see a “Related Posts” section that:</p>
+
+<ul>
+  <li><strong>🤖 Automatically finds</strong> similar posts</li>
+  <li><strong>🎯 Scores posts</strong> by shared categories and tags</li>
+  <li><strong>🎨 Displays beautifully</strong> with cards</li>
+  <li><strong>📱 Works responsively</strong> across devices</li>
+</ul>
+
+<h2 id="-toast-notifications">📝 Toast Notifications</h2>
+
+<p>Interactive feedback through toast notifications:</p>
+
+<ul>
+  <li><strong>📋 Copy confirmations</strong> when links are copied</li>
+  <li><strong>✅ Success messages</strong> for actions</li>
+  <li><strong>⚡ Auto-dismiss</strong> after a few seconds</li>
+  <li><strong>🎨 Beautiful animations</strong></li>
+</ul>
+
+<h2 id="-future-enhancements">🔮 Future Enhancements</h2>
+
+<p>Planned improvements include:</p>
+
+<ul>
+  <li><strong>🔍 Search functionality</strong> within posts</li>
+  <li><strong>💬 Better comment integration</strong></li>
+  <li><strong>📊 Reading analytics</strong></li>
+  <li><strong>🎨 Theme customization</strong></li>
+  <li><strong>📱 Progressive Web App</strong> features</li>
+</ul>
+
+<h2 id="-how-to-use-these-features">📚 How to Use These Features</h2>
+
+<h3 id="for-readers">For Readers</h3>
+
+<ol>
+  <li><strong>📖 Use the TOC</strong> to navigate long posts quickly</li>
+  <li><strong>📊 Watch the progress bar</strong> to track your reading</li>
+  <li><strong>📋 Copy code</strong> with one click for easy use</li>
+  <li><strong>🔍 Click images</strong> to view them full-screen</li>
+  <li><strong>⬆️ Use the back-to-top</strong> button for easy navigation</li>
+</ol>
+
+<h3 id="for-content-creators">For Content Creators</h3>
+
+<ol>
+  <li><strong>📝 Write clear headings</strong> for better TOC generation</li>
+  <li><strong>🏷️ Use relevant tags</strong> for better related posts</li>
+  <li><strong>📸 Add meaningful alt text</strong> to images</li>
+  <li><strong>💻 Format code blocks</strong> properly for copy functionality</li>
+</ol>
+
+<h2 id="-conclusion">✨ Conclusion</h2>
+
+<p>These enhancements transform the reading experience by providing:</p>
+
+<ul>
+  <li><strong>🎯 Better navigation</strong> with the TOC and progress tracking</li>
+  <li><strong>⚡ Improved interaction</strong> with copy buttons and lightbox</li>
+  <li><strong>🎨 Enhanced visual appeal</strong> with modern design</li>
+  <li><strong>📱 Better mobile experience</strong> with responsive layout</li>
+  <li><strong>♿ Improved accessibility</strong> for all users</li>
+</ul>
+
+<p>The blog is now a modern, interactive platform that makes reading and sharing content a pleasure. Every feature has been carefully designed to enhance your experience without getting in the way of the content.</p>
+
+<hr />
+
+<p><strong>🎉 Enjoy exploring these new features!</strong> Feel free to test them out and let me know what you think. The reading experience should now be significantly improved with these professional-grade enhancements.</p>
+
+<p><em>Have feedback or suggestions? Connect with me on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://linkedin.com/in/samadeep">LinkedIn</a>!</em></p>]]></content><author><name>Samadeep Sengupta</name></author><category term="Blog" /><category term="Features" /><category term="Enhancement" /><category term="blog" /><category term="toc" /><category term="reading-progress" /><category term="javascript" /><category term="css" /><category term="features" /><summary type="html"><![CDATA[Explore the exciting new features added to this blog: right-side table of contents, reading progress bar, enhanced navigation, copy code buttons, image lightbox, and much more!]]></summary></entry><entry><title type="html">Dynamic Programming Mastery: Knapsack Problem and Minimum Swaps for Increasing Arrays</title><link href="https://samadeep.github.io/posts/dynamic-programming-mastery-knapsack-problem-and-minimum-swaps-for-increasing-arrays/" rel="alternate" type="text/html" title="Dynamic Programming Mastery: Knapsack Problem and Minimum Swaps for Increasing Arrays" /><published>2025-07-06T08:19:46-04:00</published><updated>2025-07-06T08:19:46-04:00</updated><id>https://samadeep.github.io/posts/dynamic-programming-mastery-knapsack-problem-and-minimum-swaps-for-increasing-arrays</id><content type="html" xml:base="https://samadeep.github.io/posts/dynamic-programming-mastery-knapsack-problem-and-minimum-swaps-for-increasing-arrays/"><![CDATA[<h1 id="dynamic-programming-mastery-knapsack-problem-and-minimum-swaps-for-increasing-arrays">Dynamic Programming Mastery: Knapsack Problem and Minimum Swaps for Increasing Arrays</h1>
+
+<p>Dynamic Programming (DP) is one of the most powerful algorithmic techniques for solving optimization problems. Today, we’ll dive deep into two classic DP problems that showcase different aspects of this technique: the <strong>0/1 Knapsack Problem</strong> and <strong>Minimum Swaps to Make Arrays Increasing</strong>.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+  <li><a href="#the-01-knapsack-problem">The 0/1 Knapsack Problem</a></li>
+  <li><a href="#minimum-swaps-for-increasing-arrays">Minimum Swaps for Increasing Arrays</a></li>
+  <li><a href="#implementation-comparison">Implementation Comparison</a></li>
+  <li><a href="#performance-analysis">Performance Analysis</a></li>
+  <li><a href="#real-world-applications">Real-World Applications</a></li>
+</ol>
+
+<h2 id="the-01-knapsack-problem">The 0/1 Knapsack Problem</h2>
+
+<h3 id="problem-statement">Problem Statement</h3>
+
+<p>Given <strong>N items</strong> with weights and values, and a knapsack with capacity <strong>W</strong>, determine the maximum value that can be obtained by selecting a subset of items such that their total weight doesn’t exceed W.</p>
+
+<p><strong>Key Constraint</strong>: Each item can be taken at most once (0/1 property).</p>
+
+<h3 id="core-intuition">Core Intuition</h3>
+
+<p>The beauty of the knapsack problem lies in its recursive nature. For each item, we have two choices:</p>
+<ol>
+  <li><strong>Include it</strong>: If current weight allows, add its value to the optimal solution of remaining capacity</li>
+  <li><strong>Exclude it</strong>: Take the optimal solution without this item</li>
+</ol>
+
+<h3 id="dynamic-programming-approach">Dynamic Programming Approach</h3>
+
+<p>The recurrence relation is:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>dp[i][w] = max(dp[i-1][w], dp[i-1][w-weight[i]] + value[i])
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Where:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dp[i][w]</code> = maximum value using first i items with weight capacity w</li>
+  <li>First term = don’t take item i</li>
+  <li>Second term = take item i (if weight allows)</li>
+</ul>
+
+<h3 id="space-optimized-implementation">Space-Optimized Implementation</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">knapsack</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">weights</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">values</span><span class="p">,</span> <span class="kt">int</span> <span class="n">W</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">weights</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">W</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    
+    <span class="c1">// For each item</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Traverse from right to left to avoid using updated values</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">W</span><span class="p">;</span> <span class="n">w</span> <span class="o">&gt;=</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">w</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">dp</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">w</span> <span class="o">-</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">+</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">W</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="why-reverse-traversal">Why Reverse Traversal?</h3>
+
+<p>The key insight is that we’re simulating a 2D table with a 1D array. When we update <code class="language-plaintext highlighter-rouge">dp[w]</code>, we need the “previous row” value at <code class="language-plaintext highlighter-rouge">dp[w - weights[i]]</code>. By traversing right to left, we ensure we’re using the old values (previous row) rather than the updated values (current row).</p>
+
+<h3 id="complete-implementation-with-tracking">Complete Implementation with Tracking</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="nc">KnapsackSolution</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">maxValue</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">selectedItems</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">KnapsackSolution</span> <span class="nf">knapsackWithTracking</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">weights</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">values</span><span class="p">,</span> <span class="kt">int</span> <span class="n">W</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">weights</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">W</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+    
+    <span class="c1">// Build the DP table</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">w</span> <span class="o">&lt;=</span> <span class="n">W</span><span class="p">;</span> <span class="n">w</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Don't take item i-1</span>
+            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span><span class="p">];</span>
+            
+            <span class="c1">// Take item i-1 if possible</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">w</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span> <span class="o">-</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Backtrack to find selected items</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">selectedItems</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">W</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">!=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">selectedItems</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+            <span class="n">w</span> <span class="o">-=</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="p">{</span><span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">W</span><span class="p">],</span> <span class="n">selectedItems</span><span class="p">};</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="minimum-swaps-for-increasing-arrays">Minimum Swaps for Increasing Arrays</h2>
+
+<h3 id="problem-statement-1">Problem Statement</h3>
+
+<p>Given two arrays A and B of equal length, find the minimum number of swaps between A[i] and B[i] to make both arrays strictly increasing.</p>
+
+<h3 id="key-insight">Key Insight</h3>
+
+<p>At each position i, we have two states:</p>
+<ol>
+  <li><strong>swap[i]</strong>: Minimum swaps to make arrays increasing up to position i, with A[i] and B[i] swapped</li>
+  <li><strong>not_swap[i]</strong>: Minimum swaps to make arrays increasing up to position i, without swapping A[i] and B[i]</li>
+</ol>
+
+<h3 id="state-transitions">State Transitions</h3>
+
+<h3 id="implementation">Implementation</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;climits&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">minSwap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">B</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">swap</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">);</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">not_swap</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">);</span>
+    
+    <span class="c1">// Base case</span>
+    <span class="n">swap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>      <span class="c1">// We swap at position 0</span>
+    <span class="n">not_swap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// We don't swap at position 0</span>
+    
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Case 1: Natural increasing order</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">swap</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">swap</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>        <span class="c1">// Swap both positions</span>
+            <span class="n">not_swap</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">not_swap</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>    <span class="c1">// Don't swap both positions</span>
+        <span class="p">}</span>
+        
+        <span class="c1">// Case 2: Cross increasing order</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">swap</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">swap</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">not_swap</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// Swap current, not previous</span>
+            <span class="n">not_swap</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">not_swap</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">swap</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>  <span class="c1">// Don't swap current, swap previous</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="nf">min</span><span class="p">(</span><span class="n">swap</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">not_swap</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="detailed-case-analysis">Detailed Case Analysis</h3>
+
+<h4 id="case-1-natural-order-ai-1--ai--bi-1--bi">Case 1: Natural Order (A[i-1] &lt; A[i] &amp;&amp; B[i-1] &lt; B[i])</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>A: [1, 3, ...]  B: [2, 4, ...]
+      ↑            ↑
+   A[i-1] &lt; A[i]  B[i-1] &lt; B[i]
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>Both arrays are naturally increasing. We have consistent choices:</p>
+<ul>
+  <li>If we didn’t swap at i-1, don’t swap at i</li>
+  <li>If we swapped at i-1, swap at i</li>
+</ul>
+
+<h4 id="case-2-cross-order-ai-1--bi--bi-1--ai">Case 2: Cross Order (A[i-1] &lt; B[i] &amp;&amp; B[i-1] &lt; A[i])</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>A: [1, 4, ...]  B: [3, 2, ...]
+      ↑            ↑
+   A[i-1] &lt; B[i]  B[i-1] &lt; A[i]
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>We need alternating choices:</p>
+<ul>
+  <li>If we didn’t swap at i-1, we must swap at i</li>
+  <li>If we swapped at i-1, we must not swap at i</li>
+</ul>
+
+<h3 id="space-optimized-version">Space-Optimized Version</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="kt">int</span> <span class="nf">minSwapOptimized</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">A</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">B</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">swap</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">not_swap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">temp_swap</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">,</span> <span class="n">temp_not_swap</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">temp_swap</span> <span class="o">=</span> <span class="n">swap</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">temp_not_swap</span> <span class="o">=</span> <span class="n">not_swap</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">temp_swap</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">temp_swap</span><span class="p">,</span> <span class="n">not_swap</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">temp_not_swap</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">temp_not_swap</span><span class="p">,</span> <span class="n">swap</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+        <span class="n">swap</span> <span class="o">=</span> <span class="n">temp_swap</span><span class="p">;</span>
+        <span class="n">not_swap</span> <span class="o">=</span> <span class="n">temp_not_swap</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="nf">min</span><span class="p">(</span><span class="n">swap</span><span class="p">,</span> <span class="n">not_swap</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="implementation-comparison">Implementation Comparison</h2>
+
+<h3 id="time-and-space-complexity">Time and Space Complexity</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Algorithm</th>
+      <th>Time Complexity</th>
+      <th>Space Complexity</th>
+      <th>Optimized Space</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Knapsack</strong></td>
+      <td>O(n × W)</td>
+      <td>O(n × W)</td>
+      <td>O(W)</td>
+    </tr>
+    <tr>
+      <td><strong>Min Swaps</strong></td>
+      <td>O(n)</td>
+      <td>O(n)</td>
+      <td>O(1)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="key-differences">Key Differences</h3>
+
+<ol>
+  <li><strong>Problem Nature</strong>:
+    <ul>
+      <li>Knapsack: Combinatorial optimization</li>
+      <li>Min Swaps: Sequential decision making</li>
+    </ul>
+  </li>
+  <li><strong>State Space</strong>:
+    <ul>
+      <li>Knapsack: 2D (items × weight)</li>
+      <li>Min Swaps: 1D with binary choice</li>
+    </ul>
+  </li>
+  <li><strong>Optimization</strong>:
+    <ul>
+      <li>Knapsack: Maximize value under constraint</li>
+      <li>Min Swaps: Minimize operations to satisfy constraint</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="performance-analysis">Performance Analysis</h2>
+
+<h3 id="knapsack-performance">Knapsack Performance</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="c1">// Benchmark different approaches</span>
+<span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">benchmarkKnapsack</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">weights</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">};</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">120</span><span class="p">};</span>
+    <span class="kt">int</span> <span class="n">W</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    
+    <span class="k">auto</span> <span class="n">start</span> <span class="o">=</span> <span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">W</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">end</span> <span class="o">=</span> <span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+    
+    <span class="k">auto</span> <span class="n">duration</span> <span class="o">=</span> <span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">chrono</span><span class="o">::</span><span class="n">microseconds</span><span class="o">&gt;</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Knapsack result: "</span> <span class="o">&lt;&lt;</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s">" (Time: "</span> <span class="o">&lt;&lt;</span> <span class="n">duration</span><span class="p">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" μs)"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="min-swaps-performance">Min Swaps Performance</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kt">void</span> <span class="nf">benchmarkMinSwaps</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
+    
+    <span class="k">auto</span> <span class="n">start</span> <span class="o">=</span> <span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">minSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">end</span> <span class="o">=</span> <span class="n">chrono</span><span class="o">::</span><span class="n">high_resolution_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+    
+    <span class="k">auto</span> <span class="n">duration</span> <span class="o">=</span> <span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">chrono</span><span class="o">::</span><span class="n">microseconds</span><span class="o">&gt;</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Min swaps result: "</span> <span class="o">&lt;&lt;</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="s">" (Time: "</span> <span class="o">&lt;&lt;</span> <span class="n">duration</span><span class="p">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" μs)"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="real-world-applications">Real-World Applications</h2>
+
+<h3 id="knapsack-problem-applications">Knapsack Problem Applications</h3>
+
+<ol>
+  <li><strong>Resource Allocation</strong>: Budget allocation across projects</li>
+  <li><strong>Portfolio Optimization</strong>: Investment selection with capital constraints</li>
+  <li><strong>Cargo Loading</strong>: Optimizing cargo in transportation</li>
+  <li><strong>Memory Management</strong>: Selecting processes to load in limited memory</li>
+</ol>
+
+<h3 id="min-swaps-applications">Min Swaps Applications</h3>
+
+<ol>
+  <li><strong>Database Optimization</strong>: Reordering records for better query performance</li>
+  <li><strong>Task Scheduling</strong>: Arranging tasks to meet dependency constraints</li>
+  <li><strong>Array Sorting</strong>: Minimizing swaps for specific sorting requirements</li>
+  <li><strong>Network Routing</strong>: Optimizing path selection with minimal changes</li>
+</ol>
+
+<h2 id="complete-working-example">Complete Working Example</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Knapsack example</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"=== Knapsack Problem ==="</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">weights</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">};</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">120</span><span class="p">};</span>
+    <span class="kt">int</span> <span class="n">W</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    
+    <span class="kt">int</span> <span class="n">maxValue</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">W</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Maximum value: "</span> <span class="o">&lt;&lt;</span> <span class="n">maxValue</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    
+    <span class="c1">// Min swaps example</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">=== Minimum Swaps Problem ==="</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
+    
+    <span class="kt">int</span> <span class="n">minSwaps</span> <span class="o">=</span> <span class="n">minSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Minimum swaps needed: "</span> <span class="o">&lt;&lt;</span> <span class="n">minSwaps</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Both the Knapsack Problem and Minimum Swaps algorithm demonstrate the power of dynamic programming in solving optimization problems.</p>
+
+<p>The key insights are:</p>
+
+<ol>
+  <li><strong>Identify the State</strong>: What information do we need to track?</li>
+  <li><strong>Define Transitions</strong>: How do we move between states?</li>
+  <li><strong>Optimize Space</strong>: Can we reduce memory usage?</li>
+  <li>
+    <h2 id="handle-edge-cases-what-are-the-boundary-conditions"><strong>Handle Edge Cases</strong>: What are the boundary conditions?</h2>
+  </li>
+</ol>
+
+<p><em>Want to practice these algorithms? Try implementing variations like the Unbounded Knapsack or exploring other DP problems like Longest Common Subsequence!</em></p>]]></content><author><name>Samadeep Sengupta</name></author><category term="Algorithms" /><category term="Dynamic Programming" /><category term="dynamic-programming" /><category term="knapsack" /><category term="optimization" /><category term="algorithms" /><category term="competitive-programming" /><category term="data-structures" /><summary type="html"><![CDATA[Master two classic dynamic programming problems: the 0/1 Knapsack Problem and Minimum Swaps to Make Arrays Increasing. Learn the intuition, implementation, and optimization techniques with detailed explanations and code examples.]]></summary></entry><entry><title type="html">Understanding Schedulers and Worker Schedulers: A Deep Dive into Asynchronous Task Management</title><link href="https://samadeep.github.io/posts/understanding-schedulers-and-worker-schedulers/" rel="alternate" type="text/html" title="Understanding Schedulers and Worker Schedulers: A Deep Dive into Asynchronous Task Management" /><published>2024-01-15T05:00:00-05:00</published><updated>2024-01-15T05:00:00-05:00</updated><id>https://samadeep.github.io/posts/understanding-schedulers-and-worker-schedulers</id><content type="html" xml:base="https://samadeep.github.io/posts/understanding-schedulers-and-worker-schedulers/"><![CDATA[<h1 id="understanding-schedulers-and-worker-schedulers-a-deep-dive-into-asynchronous-task-management">Understanding Schedulers and Worker Schedulers: A Deep Dive into Asynchronous Task Management</h1>
+
+<p>In the world of modern distributed systems, <strong>schedulers</strong> and <strong>worker schedulers</strong> are fundamental components that enable scalable, efficient, and resilient task processing. Whether you’re building a web application, microservices architecture, or distributed computing system, understanding how to effectively schedule and execute tasks is crucial for optimal performance.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+  <li><a href="#what-are-schedulers">What are Schedulers?</a></li>
+  <li><a href="#types-of-schedulers">Types of Schedulers</a></li>
+  <li><a href="#worker-schedulers-architecture">Worker Schedulers Architecture</a></li>
+  <li><a href="#scheduling-algorithms">Scheduling Algorithms</a></li>
+  <li><a href="#implementation-patterns">Implementation Patterns</a></li>
+  <li><a href="#best-practices">Best Practices</a></li>
+  <li><a href="#real-world-examples">Real-World Examples</a></li>
+</ol>
+
+<h2 id="what-are-schedulers">What are Schedulers?</h2>
+
+<p>A <strong>scheduler</strong> is a system component responsible for managing the execution of tasks or processes. In the context of software systems, schedulers determine when, where, and how tasks are executed, optimizing resource utilization and ensuring system responsiveness.</p>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-878f7a60" class="mermaid">
+    
+graph TB
+    A[Task Queue] --&gt; B[Scheduler]
+    B --&gt; C[Worker Pool]
+    C --&gt; D[Task Execution]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+
+  </div>
+</div>
+
+<h2 id="types-of-schedulers">Types of Schedulers</h2>
+
+<h3 id="1-process-schedulers">1. <strong>Process Schedulers</strong></h3>
+<p>Operating system schedulers that manage CPU time allocation among processes.</p>
+
+<h3 id="2-task-schedulers">2. <strong>Task Schedulers</strong></h3>
+<p>Application-level schedulers that manage asynchronous task execution.</p>
+
+<h3 id="3-job-schedulers">3. <strong>Job Schedulers</strong></h3>
+<p>Schedulers that manage batch jobs and long-running processes.</p>
+
+<h3 id="4-real-time-schedulers">4. <strong>Real-time Schedulers</strong></h3>
+<p>Schedulers designed for time-critical applications with strict timing requirements.</p>
+
+<h2 id="scheduler-types-overview">Scheduler Types Overview</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Use Case</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Process Scheduler</strong></td>
+      <td>OS-level CPU management</td>
+      <td>Round Robin, Priority-based</td>
+    </tr>
+    <tr>
+      <td><strong>Task Scheduler</strong></td>
+      <td>Application-level async tasks</td>
+      <td>FIFO Queue, Priority Queue</td>
+    </tr>
+    <tr>
+      <td><strong>Job Scheduler</strong></td>
+      <td>Batch processing</td>
+      <td>ETL Pipeline, MapReduce</td>
+    </tr>
+    <tr>
+      <td><strong>Real-time Scheduler</strong></td>
+      <td>Time-critical applications</td>
+      <td>Rate Monotonic, EDF</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="worker-schedulers-architecture">Worker Schedulers Architecture</h2>
+
+<p>Worker schedulers are specialized systems that coordinate the execution of tasks across multiple worker processes or threads. They provide several key benefits:</p>
+
+<ul>
+  <li><strong>Scalability</strong>: Distribute workload across multiple workers</li>
+  <li><strong>Fault Tolerance</strong>: Handle worker failures gracefully</li>
+  <li><strong>Resource Management</strong>: Optimize resource utilization</li>
+  <li><strong>Load Distribution</strong>: Balance work across available resources</li>
+</ul>
+
+<h3 id="basic-worker-flow">Basic Worker Flow</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>Client Request → API Gateway → Scheduler → Worker Pool → Database
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="scheduling-algorithms">Scheduling Algorithms</h2>
+
+<h3 id="first-come-first-served-fcfs">First-Come, First-Served (FCFS)</h3>
+<p>The simplest scheduling algorithm where tasks are executed in the order they arrive.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">FCFSScheduler</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">task</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">queue</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">get_next_task</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">queue</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">queue</span> <span class="k">else</span> <span class="bp">None</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="priority-based-scheduling">Priority-Based Scheduling</h3>
+<p>Tasks are assigned priorities and executed based on their priority levels.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">heapq</span>
+
+<span class="k">class</span> <span class="nc">PriorityScheduler</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">priority_queue</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">priority</span><span class="p">):</span>
+        <span class="n">heapq</span><span class="p">.</span><span class="nf">heappush</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">priority_queue</span><span class="p">,</span> <span class="p">(</span><span class="n">priority</span><span class="p">,</span> <span class="n">task</span><span class="p">))</span>
+    
+    <span class="k">def</span> <span class="nf">get_next_task</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">heapq</span><span class="p">.</span><span class="nf">heappop</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">priority_queue</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">priority_queue</span> <span class="k">else</span> <span class="bp">None</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="round-robin-scheduling">Round Robin Scheduling</h3>
+<p>Each task gets a fixed time slice, and tasks are rotated in a circular manner.</p>
+
+<p><strong>Round Robin Timeline:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>Time: [0-100ms] → Task A
+Time: [100-200ms] → Task B  
+Time: [200-300ms] → Task C
+Time: [300-400ms] → Task A (continues)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="shortest-job-first-sjf">Shortest Job First (SJF)</h3>
+<p>Tasks with the shortest estimated execution time are prioritized.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">SJFScheduler</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">estimated_time</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="n">estimated_time</span><span class="p">,</span> <span class="n">task</span><span class="p">))</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="nf">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    
+    <span class="k">def</span> <span class="nf">get_next_task</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">tasks</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">tasks</span> <span class="k">else</span> <span class="bp">None</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="implementation-patterns">Implementation Patterns</h2>
+
+<h3 id="1-producer-consumer-pattern">1. Producer-Consumer Pattern</h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-7305edbe" class="mermaid">
+    
+graph LR
+    A[Producer] --&gt; D[Queue]
+    B[Producer] --&gt; D
+    D --&gt; E[Consumer]
+    D --&gt; F[Consumer]
+    
+    style D fill:#ffeb3b
+    style A fill:#4caf50
+    style B fill:#4caf50
+    style E fill:#2196f3
+    style F fill:#2196f3
+
+  </div>
+</div>
+
+<h3 id="2-work-stealing-pattern">2. Work Stealing Pattern</h3>
+
+<p>In work stealing, idle workers can steal tasks from busy workers’ queues.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">threading</span>
+<span class="kn">from</span> <span class="n">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+
+<span class="k">class</span> <span class="nc">WorkStealingScheduler</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">num_workers</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">workers</span> <span class="o">=</span> <span class="p">[</span><span class="nf">deque</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">num_workers</span><span class="p">)]</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">locks</span> <span class="o">=</span> <span class="p">[</span><span class="n">threading</span><span class="p">.</span><span class="nc">Lock</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">num_workers</span><span class="p">)]</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">current_worker</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">task</span><span class="p">):</span>
+        <span class="n">worker_id</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">current_worker</span> <span class="o">%</span> <span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">workers</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">self</span><span class="p">.</span><span class="n">locks</span><span class="p">[</span><span class="n">worker_id</span><span class="p">]:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">workers</span><span class="p">[</span><span class="n">worker_id</span><span class="p">].</span><span class="nf">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">current_worker</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">steal_task</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">worker_id</span><span class="p">):</span>
+        <span class="c1"># Try to steal from other workers
+</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">workers</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">worker_id</span><span class="p">:</span>
+                <span class="k">with</span> <span class="n">self</span><span class="p">.</span><span class="n">locks</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">workers</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">workers</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">popleft</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">None</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="3-actor-model-pattern">3. Actor Model Pattern</h3>
+
+<p>In the Actor Model, each component has its own message queue and processes messages sequentially:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>Actor 1 ←→ Message Queue ←→ Actor 2
+   ↓                           ↓
+State &amp;                    State &amp;
+Behavior                   Behavior
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<h3 id="1-task-granularity">1. <strong>Task Granularity</strong></h3>
+<ul>
+  <li>Keep tasks small and focused</li>
+  <li>Avoid long-running tasks that block workers</li>
+  <li>Break complex tasks into smaller sub-tasks</li>
+</ul>
+
+<h3 id="2-error-handling">2. <strong>Error Handling</strong></h3>
+<ul>
+  <li>Implement retry mechanisms with exponential backoff</li>
+  <li>Handle partial failures gracefully</li>
+  <li>Log errors for debugging and monitoring</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">time</span>
+<span class="kn">import</span> <span class="n">random</span>
+<span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="k">def</span> <span class="nf">retry_with_backoff</span><span class="p">(</span><span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">base_delay</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_delay</span><span class="o">=</span><span class="mi">60</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">retries</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">while</span> <span class="n">retries</span> <span class="o">&lt;</span> <span class="n">max_retries</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="nf">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="n">retries</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">retries</span> <span class="o">&gt;=</span> <span class="n">max_retries</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">e</span>
+                    
+                    <span class="n">delay</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">base_delay</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">retries</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="p">.</span><span class="nf">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">max_delay</span><span class="p">)</span>
+                    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="n">wrapper</span>
+    <span class="k">return</span> <span class="n">decorator</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="3-resource-management">3. <strong>Resource Management</strong></h3>
+<ul>
+  <li>Monitor worker health and performance</li>
+  <li>Implement circuit breakers for failing workers</li>
+  <li>Use connection pooling for database connections</li>
+</ul>
+
+<h3 id="4-monitoring-and-observability">4. <strong>Monitoring and Observability</strong></h3>
+<p>Track these key metrics:</p>
+<ul>
+  <li>Task execution times and success rates</li>
+  <li>Queue depths and worker utilization</li>
+  <li>System resource usage</li>
+  <li>Error rates and patterns</li>
+</ul>
+
+<h2 id="real-world-examples">Real-World Examples</h2>
+
+<h3 id="1-celery-python">1. <strong>Celery (Python)</strong></h3>
+<p>A distributed task queue that supports multiple brokers and result backends.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="nc">Celery</span><span class="p">(</span><span class="sh">'</span><span class="s">tasks</span><span class="sh">'</span><span class="p">,</span> <span class="n">broker</span><span class="o">=</span><span class="sh">'</span><span class="s">redis://localhost:6379</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="nd">@app.task</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="nd">@app.task</span>
+<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="c1"># Long-running data processing task
+</span>    <span class="k">return</span> <span class="n">processed_data</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="2-apache-airflow">2. <strong>Apache Airflow</strong></h3>
+<p>A workflow orchestration platform for scheduling and monitoring complex data pipelines.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">airflow</span> <span class="kn">import</span> <span class="n">DAG</span>
+<span class="kn">from</span> <span class="n">airflow.operators.python</span> <span class="kn">import</span> <span class="n">PythonOperator</span>
+<span class="kn">from</span> <span class="n">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="k">def</span> <span class="nf">extract_data</span><span class="p">():</span>
+    <span class="c1"># Extract data from source
+</span>    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">transform_data</span><span class="p">():</span>
+    <span class="c1"># Transform data
+</span>    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">():</span>
+    <span class="c1"># Load data to destination
+</span>    <span class="k">pass</span>
+
+<span class="n">dag</span> <span class="o">=</span> <span class="nc">DAG</span><span class="p">(</span>
+    <span class="sh">'</span><span class="s">etl_pipeline</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">default_args</span><span class="o">=</span><span class="p">{</span>
+        <span class="sh">'</span><span class="s">depends_on_past</span><span class="sh">'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">start_date</span><span class="sh">'</span><span class="p">:</span> <span class="nf">datetime</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="sh">'</span><span class="s">retries</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">retry_delay</span><span class="sh">'</span><span class="p">:</span> <span class="nf">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="n">schedule_interval</span><span class="o">=</span><span class="nf">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">extract_task</span> <span class="o">=</span> <span class="nc">PythonOperator</span><span class="p">(</span>
+    <span class="n">task_id</span><span class="o">=</span><span class="sh">'</span><span class="s">extract</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">python_callable</span><span class="o">=</span><span class="n">extract_data</span><span class="p">,</span>
+    <span class="n">dag</span><span class="o">=</span><span class="n">dag</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">transform_task</span> <span class="o">=</span> <span class="nc">PythonOperator</span><span class="p">(</span>
+    <span class="n">task_id</span><span class="o">=</span><span class="sh">'</span><span class="s">transform</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">python_callable</span><span class="o">=</span><span class="n">transform_data</span><span class="p">,</span>
+    <span class="n">dag</span><span class="o">=</span><span class="n">dag</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">load_task</span> <span class="o">=</span> <span class="nc">PythonOperator</span><span class="p">(</span>
+    <span class="n">task_id</span><span class="o">=</span><span class="sh">'</span><span class="s">load</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">python_callable</span><span class="o">=</span><span class="n">load_data</span><span class="p">,</span>
+    <span class="n">dag</span><span class="o">=</span><span class="n">dag</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">extract_task</span> <span class="o">&gt;&gt;</span> <span class="n">transform_task</span> <span class="o">&gt;&gt;</span> <span class="n">load_task</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="3-kubernetes-jobs-and-cronjobs">3. <strong>Kubernetes Jobs and CronJobs</strong></h3>
+<p>Container orchestration for batch processing and scheduled tasks.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">batch/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Job</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">data-processing-job</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">processor</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">my-app:latest</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">python"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">process_data.py"</span><span class="pi">]</span>
+        <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">requests</span><span class="pi">:</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">512Mi"</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">500m"</span>
+          <span class="na">limits</span><span class="pi">:</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1Gi"</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1000m"</span>
+      <span class="na">restartPolicy</span><span class="pi">:</span> <span class="s">Never</span>
+  <span class="na">backoffLimit</span><span class="pi">:</span> <span class="m">4</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="4-advanced-scheduling-architecture">4. <strong>Advanced Scheduling Architecture</strong></h3>
+
+<div class="mermaid-diagram">
+  <div id="mermaid-deb7ec8e" class="mermaid">
+    
+graph TB
+    subgraph "System Architecture"
+        LB[Load Balancer]
+        S1[Scheduler 1]
+        S2[Scheduler 2]
+        MQ[Message Queue]
+        W1[Worker Pool 1]
+        W2[Worker Pool 2]
+        DB[(Database)]
+    end
+    
+    LB --&gt; S1
+    LB --&gt; S2
+    S1 --&gt; MQ
+    S2 --&gt; MQ
+    MQ --&gt; W1
+    MQ --&gt; W2
+    W1 --&gt; DB
+    W2 --&gt; DB
+    
+    style LB fill:#ff9800
+    style MQ fill:#f44336
+    style DB fill:#4caf50
+
+  </div>
+</div>
+
+<h2 id="performance-optimization-strategies">Performance Optimization Strategies</h2>
+
+<h3 id="1-batch-processing">1. <strong>Batch Processing</strong></h3>
+<p>Group similar tasks together to reduce overhead.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">BatchScheduler</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_wait_time</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">max_wait_time</span> <span class="o">=</span> <span class="n">max_wait_time</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">pending_tasks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">last_batch_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">task</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">pending_tasks</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+        
+        <span class="nf">if </span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">pending_tasks</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">self</span><span class="p">.</span><span class="n">batch_size</span> <span class="ow">or</span> 
+            <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">last_batch_time</span> <span class="o">&gt;</span> <span class="n">self</span><span class="p">.</span><span class="n">max_wait_time</span><span class="p">):</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">process_batch</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">process_batch</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">pending_tasks</span><span class="p">:</span>
+            <span class="n">batch</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">pending_tasks</span><span class="p">.</span><span class="nf">copy</span><span class="p">()</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">pending_tasks</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">last_batch_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+            
+            <span class="c1"># Process batch in parallel
+</span>            <span class="n">self</span><span class="p">.</span><span class="nf">execute_batch</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="2-connection-pooling">2. <strong>Connection Pooling</strong></h3>
+<p>Reuse database connections to reduce connection overhead.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="n">sqlalchemy.pool</span> <span class="kn">import</span> <span class="n">QueuePool</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="nf">create_engine</span><span class="p">(</span>
+    <span class="sh">'</span><span class="s">postgresql://user:password@localhost/db</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">poolclass</span><span class="o">=</span><span class="n">QueuePool</span><span class="p">,</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">max_overflow</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">pool_pre_ping</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">pool_recycle</span><span class="o">=</span><span class="mi">3600</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="3-caching-strategies">3. <strong>Caching Strategies</strong></h3>
+<p>Cache frequently accessed data to reduce processing time.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">redis</span>
+<span class="kn">import</span> <span class="n">pickle</span>
+<span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="n">redis_client</span> <span class="o">=</span> <span class="n">redis</span><span class="p">.</span><span class="nc">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="sh">'</span><span class="s">localhost</span><span class="sh">'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">cache_result</span><span class="p">(</span><span class="n">expiration</span><span class="o">=</span><span class="mi">3600</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">cache_key</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">func</span><span class="p">.</span><span class="n">__name__</span><span class="si">}</span><span class="s">:</span><span class="si">{</span><span class="nf">hash</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">kwargs</span><span class="p">))</span><span class="si">}</span><span class="sh">"</span>
+            
+            <span class="c1"># Try to get from cache
+</span>            <span class="n">cached_result</span> <span class="o">=</span> <span class="n">redis_client</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">cache_key</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cached_result</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">pickle</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="n">cached_result</span><span class="p">)</span>
+            
+            <span class="c1"># Compute result
+</span>            <span class="n">result</span> <span class="o">=</span> <span class="nf">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            
+            <span class="c1"># Cache result
+</span>            <span class="n">redis_client</span><span class="p">.</span><span class="nf">setex</span><span class="p">(</span><span class="n">cache_key</span><span class="p">,</span> <span class="n">expiration</span><span class="p">,</span> <span class="n">pickle</span><span class="p">.</span><span class="nf">dumps</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+            
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">return</span> <span class="n">wrapper</span>
+    <span class="k">return</span> <span class="n">decorator</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="key-scheduling-algorithms-comparison">Key Scheduling Algorithms Comparison</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Algorithm</th>
+      <th>Time Complexity</th>
+      <th>Use Case</th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FCFS</strong></td>
+      <td>O(1)</td>
+      <td>Simple queuing</td>
+      <td>Fair, simple</td>
+      <td>No prioritization</td>
+    </tr>
+    <tr>
+      <td><strong>Priority</strong></td>
+      <td>O(log n)</td>
+      <td>Critical tasks</td>
+      <td>Handles urgency</td>
+      <td>Starvation possible</td>
+    </tr>
+    <tr>
+      <td><strong>Round Robin</strong></td>
+      <td>O(1)</td>
+      <td>Interactive systems</td>
+      <td>Fair time slicing</td>
+      <td>Context switching overhead</td>
+    </tr>
+    <tr>
+      <td><strong>SJF</strong></td>
+      <td>O(n log n)</td>
+      <td>Batch processing</td>
+      <td>Optimal turnaround</td>
+      <td>Requires time estimation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Schedulers and worker schedulers are essential components in modern distributed systems. They enable efficient task execution, resource utilization, and system scalability. When designing scheduling systems, consider factors such as:</p>
+
+<ul>
+  <li><strong>Task characteristics</strong> (CPU-bound vs I/O-bound)</li>
+  <li><strong>Scalability requirements</strong></li>
+  <li><strong>Fault tolerance needs</strong></li>
+  <li><strong>Performance constraints</strong></li>
+  <li><strong>Resource availability</strong></li>
+</ul>
+
+<p>By understanding different scheduling algorithms and implementation patterns, you can build robust, scalable, and efficient task processing systems that meet your application’s specific requirements.</p>
+
+<p>Whether you’re building a simple background job processor or a complex distributed workflow engine, the principles and patterns discussed in this post will help you make informed decisions about your scheduling architecture.</p>
+
+<hr />
+
+<p><em>Have questions about schedulers or want to share your own experiences? Feel free to reach out on <a href="https://twitter.com/samadeepviews">Twitter</a> or <a href="https://www.linkedin.com/in/samadeep">LinkedIn</a>!</em></p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="https://example.com">Distributed Systems Concepts</a></li>
+  <li><a href="https://example.com">Concurrency in Python</a></li>
+  <li><a href="https://example.com">Microservices Architecture Patterns</a></li>
+  <li><a href="https://example.com">System Design Interview Questions</a></li>
+</ul>]]></content><author><name>Samadeep Sengupta</name></author><category term="System Design" /><category term="Backend Architecture" /><category term="schedulers" /><category term="workers" /><category term="async" /><category term="distributed-systems" /><category term="architecture" /><category term="performance" /><category term="scalability" /><summary type="html"><![CDATA[Explore the world of schedulers and worker schedulers in modern distributed systems. Learn about different scheduling algorithms, implementation patterns, and best practices for building scalable asynchronous task processing systems.]]></summary></entry></feed>
